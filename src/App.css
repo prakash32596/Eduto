@@ -1,0 +1,87 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&family=Oswald&family=Quicksand:wght@600;700&family=Roboto+Condensed&family=Roboto+Slab:wght@200&family=Teko:wght@300&display=swap'); */
+.App {
+ width: 100%;
+}
+
+/* .home-section{
+  background-image: url('./assets/images/group.svg');
+  background: var(--unnamed-color-e1e5ef) 0% 0% no-repeat padding-box; 
+background: #E1E5EF 0% 0% no-repeat padding-box;
+ border-radius: 5px;
+}
+.search{
+  min-height: 600px;
+  background-image: url('./assets/images/Rectangle 6010.svg');
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position-y: bottom 10px;
+}
+.searchicon{
+  padding-top: 150px;
+}
+.home-background{
+  background-color: #E1E5EF;
+  min-height:250px;
+  opacity: 0.11;
+  margin-top: -130px;
+  margin-left: 40px;
+}
+.searchicon2{
+  padding-top: 50px;
+}
+
+.searchField > .searchInputField{
+background: #FFFFFF;
+box-shadow: 0px 11px 68px #0178FF26;
+border-radius: 8px;
+border:none;
+height: 46px !important;
+opacity: 1;
+}
+.searchInputField::placeholder{
+   font-size: 17px !important;
+}
+.searchInputGroup{
+  box-shadow: 0px 11px 68px white !important;
+  border-radius: 0px !important; 
+  border:none !important;
+  left: 20px;
+  background-color:white !important;
+  opacity: 1;
+}
+.homeServiceSection{
+  margin-top: -60px;
+}
+.editoSection{
+  background-image: url('./assets/images/group.svg');
+  background-repeat: no-repeat;
+  background-size: 833px 776px;
+  background-position-x: 357px;
+  background-position-y: -76px;
+  min-height: 598px;
+
+}
+.listItemGroup  .listGroupItem {
+  border-left:none !important;
+  border-top:none !important;
+  border-right:none !important;
+  border-bottom:none !important;
+  margin:10px;
+ 
+}
+ .listGroupItem .offeringList{
+  display: visible !important;
+}
+
+.listItemGroup  .listGroupItem.active {
+  border-left:5px solid #529BDD !important;
+  border-top:none !important;
+  border-right:none !important;
+  border-bottom:none !important;
+  margin:10px;
+  color:#529BDD;
+  background-color: #F1F8FF;
+}
+ .listGroupItem.active  .offeringList{
+  display: visible !important;
+} */

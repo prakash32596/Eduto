@@ -1,0 +1,45 @@
+.Header{
+    width: 100%;
+    z-index: 99;
+    /* box-sizing: border-box; */
+}
+.navSection{
+    width: 100%;
+    background-color: transparent !important;
+    z-index: 99 !important;
+}
+.brandLogo{
+    font-family: 'Inter';
+    font-size: 1.67rem !important;
+    font-weight: bold;
+    color:#001632;
+}
+.navItem{
+    color:#001632;
+    font-size: 15px !important;
+    font-family: 'Inter';
+    padding-left: 16px !important ;
+    padding-top: 13px !important;
+    font-weight: bold;
+    text-decoration: none; 
+    position: relative; 
+}
+.navItem.active{
+    color: #0178FF !important;
+}
+.navItem.active::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: 2px; 
+    margin: 0 auto;
+		  left: 6px;
+        right: 0;
+		  width: 80%;
+		  background: #0178FF;
+}
+.navItem.active::before{
+    width: 90%;
+    background: #0178FF;
+    /* z-index: 22; */
+}
