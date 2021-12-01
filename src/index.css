@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald&family=Quicksand:wght@600;700&family=Roboto+Condensed&family=Roboto+Slab:wght@200&family=Teko:wght@300&display=swap');
-body {
-  box-sizing: border-box;
-  margin: 0 auto;
+ html,body {
+  /* box-sizing: border-box; */
+  overflow-x: hidden;
+  width: 100%; 
+   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont,'Inter' 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

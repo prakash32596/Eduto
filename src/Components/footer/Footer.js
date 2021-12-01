@@ -9,15 +9,15 @@ function Footer() {
         <div className="Header">
             <footer class="footer">
                 <Container>
-                <div>
-                    <Row>
-                        <Col xs={3}>
+                <div class ="col-md-12 " >
+                    <Row md={12}>
+                        <Col className="py-2" sm={4}  md={3} >
                             <div>
                                 <h1 style={{color:'white',textAlign:'left'}}>Eduto.</h1>
                                 <p style={{color:'white',textAlign:'left',fontSize:'12px'}}>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do </p>
                             </div>
                         </Col>
-                        <Col xs={2}>
+                        <Col className="py-2" sm={4}  md={2}>
                             <div>
                                 <h6 style={{color:'#707070',}}>Company</h6>
                                 <Nav defaultActiveKey="/home" className="flex-column">
@@ -29,7 +29,7 @@ function Footer() {
                                 </Nav>
                             </div>
                         </Col>
-                        <Col xs={2}>
+                        <Col className="py-2" sm={4}  md={2}>
                             <div>
                                 <h6 style={{color:'#707070',}}>Other Links</h6>
                                 <Nav defaultActiveKey="/home" className="flex-column">
@@ -40,7 +40,7 @@ function Footer() {
                                 </Nav>
                             </div>
                         </Col>
-                        <Col xs={2}>
+                        <Col className="py-2"  sm={4}  md={2}>
                             <div>
                                 <h6 style={{color:'#707070',}}>Support</h6>
                                 <Nav defaultActiveKey="/home" className="flex-column">
@@ -50,7 +50,7 @@ function Footer() {
                                 </Nav>
                             </div>
                         </Col>
-                        <Col xs={3}>
+                        <Col className="py-2"  sm={5}  md={3}>
                             <div>
                                 <h6  style={{color:'#707070',}}>Get In Touch</h6>
                                 <p style={{color:'white',fontFamily:'Inter',fontWeight:'normal',fontSize:'14px' }}><img className="pr-2" src={require('../../assets/images/noun_call_2091475.svg').default} width="30" height="20" />(800) 342-5598</p>

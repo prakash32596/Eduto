@@ -1,7 +1,10 @@
 .mainHomePage{
    width: 100%;
 }
-
+.text{
+  font-family: 'Inter';
+  font-weight: bold;
+}
 .home-section{
     background-image: url('../assets/images/group.svg');
     background: var(--unnamed-color-e1e5ef) 0% 0% no-repeat padding-box; 
@@ -138,7 +141,7 @@
    .listGroupItem.active  .offeringList{
     display: visible !important;
   }
-   
+  
   /* .listGroupItem .offeringList{
     display: none !important;
   } */
@@ -155,4 +158,71 @@
     min-height: 800px;
     background-position-y: -695px;
     background-position-x: -213px;
+}
+.bannerImage{
+  background-image: linear-gradient(to right, #001631,#021022f8,transparent ),url("../assets/images/casey-olsen-NlFyPKxXORo-unsplash@2x.png");
+  width: 100%;
+  height: 300px;
+  background-size:contain;
+  /* background-size: 100% 100%; */
+  /* background-position-x: 300px; */
+  background-position: center,right;
+  background-repeat: no-repeat;
+  width: 100%;  /* height: auto; */
+  border-radius: 10px;
+}
+.bannerCircle{
+  background-image: url("../assets/images/Ellipse 54.svg");
+  background-repeat: no-repeat;
+  background-size: 200px 200px !important;
+  background-position-y: 200px;
+  color: white;
+  padding-left: 30px !important;
+  padding-top: 30px !important;
+}
+
+
+@media screen 
+  and (max-width: 480px) {
+    .text{
+      font-family: 'Inter';
+      font-weight: bold;
+    }
+  .headingSection {
+    font-size: 17px !important;
+    text-align: center;
+  }
+  .secondaryText{
+    text-align: center;
+    display:flex;
+    justify-content: center;
+  }
+  .bestCard{
+    margin-left: 126px !important;
+  }
+  .searchInputField::placeholder{
+    font-size: 15px !important;
+    /* padding-top: -12px !important; */
+ }
+ .bannerImage{
+  background-image: linear-gradient(to right, #001631,#021022f8,transparent ),url("../assets/images/casey-olsen-NlFyPKxXORo-unsplash@2x.png");
+  width: 100%;
+  height: 300px;
+  background-size:contain;
+  /* background-size: 100% 100%; */
+  /* background-position-x: 300px; */
+  background-position: center,right;
+  background-repeat: no-repeat;
+  width: 100%;  /* height: auto; */
+  border-radius: 10px;
+}
+.categorySection{
+  margin-top: 21px !important;
+}
+.bannerHeading{
+  font-size: 24px;
+}
+.sponsoredTag{
+  margin-top: -17px !important;
+}
 }
