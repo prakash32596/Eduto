@@ -1,20 +1,19 @@
 .footer {
-    background-color: #001632;
-    width: 100%;
-    text-align: left;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 50px;
-    min-height: 250px;
-    /* margin-top: 50px; */
-  }
-.navLink{
-    color:white;
-    text-align: left;
-    font-size: 14px !important;
-    font-weight: normal !important;
-    font-family: 'Inter';
+  background-color: #001632;
+  width: 100%;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 50px;
+  min-height: 250px;
+  /* margin-top: 50px; */
 }
-  
-  
+.navLink{
+  color:white;
+  text-align: left;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  font-family: 'Inter';
+}
+

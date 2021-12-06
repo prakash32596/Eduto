@@ -1,16 +1,24 @@
-// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { Container, Card, Col, Row, Navbar, Nav, ListGroup, Tab, Image, NavDropdown, InputGroup, InputForm, Form, FormControl, Button } from 'react-bootstrap';
-import Header from './Components/header/Header';
 import HomePage from './Landing-Page/HomePage';
-import Footer from './Components/footer/Footer';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import MainScreen from './Main-Screen/MainScreen';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <HomePage/>
-      <Footer/>
+      <Router>
+        <Routes>
+          <Route path="/"  element={<HomePage/>}  ></Route>
+          <Route path="/about"  element={<MainScreen/>}  ></Route>
+        </Routes>
+        </Router>
+     
     </div>
 
   );

@@ -3,13 +3,14 @@ import './HomePage.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Container, Card, Col, Row, Navbar, Nav, ListGroup, Tab, Image, NavDropdown, InputGroup, InputForm, Form, FormControl, Button } from 'react-bootstrap';
-// import Header from './Components/header/Header';
+import Header from '../Components/header/Header';
+import Footer from '../Components/footer/Footer';
 
 
 function HomePage() {
   return (
     <div className="mainHomepage">
-      {/* <Header/> */}
+      <Header/>
       <section className="search" style={{ width: '100%', position: "", marginTop: '-77px', }}>
         <Container>
           <div className="searchicon">
@@ -481,6 +482,7 @@ function HomePage() {
           </Row>
         </Container>
       </section>
+      <Footer/>
     </div>
 
   );

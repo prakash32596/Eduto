@@ -1,0 +1,52 @@
+.primaryNav{
+    width: 100%;
+    /* height: 200px !important; */
+    background-color: #001632 !important;
+}
+.primaryBrandLogo{
+    font-family: 'Inter';
+    font-size: 1.0rem !important;
+    font-weight: bold;
+    color:white !important;
+}
+.primaryNavItem{
+    color:white !important;
+    font-size: 12px !important;
+    font-family: 'Inter';
+    /* padding-left: 16px !important ;
+    padding-top: 13px !important; */
+    font-weight: bold;
+    text-decoration: none; 
+    position: relative; 
+}
+
+.primaryNavItem.active{
+    color: #0178FF !important;
+}
+.primaryNavItem.active::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    bottom: 4px; 
+    margin: 0 auto;
+		  left: 6px;
+        right: 0;
+		  width: 80%;
+		  background: #0178FF;
+}
+.primaryNavItem.active::before{
+    width: 90%;
+    background: #0178FF;
+    /* z-index: 22; */
+}
+
+.dropdown{
+    color:white !important;
+    font-size: 12px !important;
+    font-family: 'Inter';
+    padding-left: 6px !important ;
+    padding-top: 8px !important;
+    font-weight: bold;
+    text-decoration: none; 
+    position: relative; 
+}

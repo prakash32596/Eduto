@@ -31,8 +31,8 @@
 .navItem.active::after{
     position: absolute;
     content: '';
-    height: 2px;
-    bottom: 2px; 
+    height: 4px;
+    bottom: 4px; 
     margin: 0 auto;
 		  left: 6px;
         right: 0;
