@@ -1,5 +1,17 @@
 .About {
-    width: 100%;
-    margin:0;
+    /* width: 100%;
+    margin:0; */
    }
    
+.navTab .navTabItem .navTabLink{
+    /* background-color: #F4F9FF !important; */
+    color: black !important;
+    width: 240px;
+
+}
+.navTab .navTabItem .navTabLink.active{
+    background-color: #F4F9FF !important;
+    color: #0178FF !important;
+   
+
+}
