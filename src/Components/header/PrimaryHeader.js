@@ -15,16 +15,16 @@ const  PrimaryHeader = () =>{
        
         <Navbar className="primaryNav" expand="lg">
       <Container>
-      <Navbar.Brand className="primaryBrandLogo" href="#home">Eduto .</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto navBar">
+      <Nav className="m-auto navBar">
+      <Navbar.Brand className="primaryBrandLogo" href="#home">Eduto .</Navbar.Brand>
               <Nav.Link as={Link}  className="primaryNavItem" to="/">Home</Nav.Link>
               <Nav.Link as={Link}  className="primaryNavItem" to="/Courses">Courses</Nav.Link>
               <Nav.Link as={Link}  className="primaryNavItem" to="#College/Universities">College/Universities</Nav.Link>
               <Nav.Link as={Link}  className="primaryNavItem" to="#Get Involved">Get Involved</Nav.Link>
             </Nav>
-            <Nav className="justify-content-end navBar">
+            <Nav className="m-auto navBar">
               <Nav.Link as={Link}  className="primaryNavItem" to="/Products">Products</Nav.Link>
               <Nav.Link as={Link}  className="primaryNavItem" to="/Pricing">Pricing</Nav.Link>
               <NavDropdown bsPrefix="dropdown" title="Docs" className="primaryDropdownNavItem" id="nav-dropdown">

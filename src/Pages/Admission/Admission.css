@@ -1,0 +1,52 @@
+.About {
+    /* width: 100%;
+    margin:0; */
+   }
+   
+.navTabLink{
+    color: black !important;
+    font-family: 'Inter';
+    font-size:16px !important;
+    font-weight: 500 !important;
+}
+.navTabLink.active{
+    background-color: #F4F9FF !important;
+    color: #0178FF !important;
+    border-radius: 8px;
+}
+.slick-prev {
+    /* left:-px !important; */
+    /* color: red !important; */
+    /* position: absolute !important; */
+    /* z-index: 192; */
+}
+.slick-prev .slick-next {
+    background: black !important;
+}
+
+.slick-prev:before, .slick-next:before {
+    /* font-family: 'Font Awesome 5 Brands' !important; */
+    /* content: "\f054" ; */
+    font-weight: 400;
+    font-size:30px !important;
+    /* line-height: 1; */
+    /* opacity: .75; */
+    color: black !important;
+}
+
+.tableData{
+        height: 65px;
+        width: 590px;
+}
+
+.tableHead{
+    background-color: #F4F9FF;
+    height: 65px;
+}
+
+.tableBorder{
+    border-bottom: 0.5;
+    border-bottom-width: 1px;
+    border-color:rgba(20, 20, 20, 0.068);;
+    border-style: solid;
+}

@@ -9,6 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 // library.add(fab, faCheckSquare, faCoffee)
+import 'slick-carousel/slick/slick.css'; 
+import 'slick-carousel/slick/slick-theme.css';
 
 
 ReactDOM.render(

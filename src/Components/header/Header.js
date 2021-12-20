@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Header.css';
 // import 'bootstrap/dist/css/bootstrap.min.css
 import {
@@ -8,46 +8,50 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import {Row,Col, Container, Navbar, Nav, Button } from 'react-bootstrap';
+import {Row,Col, Container, Navbar, Nav, Button,Offcanvas, OffcanvasHeader,OffcanvasBody    } from 'react-bootstrap';
 
 
 function Header() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <div className="Header">
-      <Row>
-        <Col  md={12} xs={12}   sm={12}>
-      {/* <Navbar style={{ backGround: 'transparent', position: "",zIndex:'99',width:"100%" }}  expand="lg" bg="" variant="">
-        <Container>
-          <Navbar.Brand className="brandLogo" href="#home">Eduto</Navbar.Brand>
-          <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link className="navItem" href="#home">Home</Nav.Link>
-            <Nav.Link className="navItem" href="#Courses">Courses</Nav.Link>
-            <Nav.Link className="navItem" href="#College/Universities">College/Universities</Nav.Link>
-            <Nav.Link className="navItem" href="#Get Involved">Get Involved</Nav.Link>
-          </Nav>
-          </Navbar.Collapse>
-          <Button href="#"> Signup</Button>
-
-        </Container>
-      </Navbar> */}
-      <Navbar className="navSectioin" bg="" expand="lg">
+      <Container>
+      <Navbar className="navSection" bg="" expand="lg">
     <Container>
     <Navbar.Brand className="brandLogo" href="#home">Eduto .</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto navBar">
+    {/* <Navbar.Collapse id="basic-navbar-nav"> */}
+          <Nav className="me-auto navBar mobile-menu-display">
             <Nav.Link as={Link}  className="navItem active" to="/">Home</Nav.Link>
             <Nav.Link as={Link}  className="navItem" to="/About" >Courses</Nav.Link>
             <Nav.Link as={Link}  className="navItem" to="/College/Universities">College/Universities</Nav.Link>
             <Nav.Link as={Link}  className="navItem" to="/Get Involved">Get Involved</Nav.Link>
           </Nav>
+          <Nav className="ms-auto navBar mobile-menu-display">
+            <Button  className="ms-auto" id="navSignupButton" href="#"> Signup</Button> 
+            </Nav>
+          {/* <div></div> */}
+    <Navbar.Toggle aria-controls="basic-navbar-nav " onClick={handleShow} />
+    {/* </Navbar.Collapse> */}
+    <Offcanvas className="mobileMenu" show={show} onHide={handleClose} placement="bottom">
+        {/* <Offcanvas.Header closeButton>
+        </Offcanvas.Header> */}
+        <Offcanvas.Body>
+        <Nav className="me-auto navBar">
+            <Nav.Link as={Link}  className="navItem active" to="/">Home</Nav.Link>
+            <Nav.Link as={Link}  className="navItem" to="/About" >Courses</Nav.Link>
+            <Nav.Link as={Link}  className="navItem" to="/College/Universities">College/Universities</Nav.Link>
+            <Nav.Link as={Link}  className="navItem" to="/Get Involved">Get Involved</Nav.Link>
+          </Nav>
+          {/* <div></div> */}
             <Button id="navSignupButton" href="#"> Signup</Button> 
-    </Navbar.Collapse>
+        </Offcanvas.Body>
+      </Offcanvas>
     </Container>
     </Navbar>
-      </Col>
-      </Row>
+    </Container>
     </div>
 
   );

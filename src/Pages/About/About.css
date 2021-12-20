@@ -6,12 +6,44 @@
 .navTab .navTabItem .navTabLink{
     /* background-color: #F4F9FF !important; */
     color: black !important;
-    width: 240px;
+    width: 260  px;
 
 }
 .navTab .navTabItem .navTabLink.active{
     background-color: #F4F9FF !important;
     color: #0178FF !important;
-   
+}
+.visually-hidden{
+    display: none;
+}
+/* .carousel-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    background-color: #00008B;
+    color: #fff;
+    margin: 0 15px;
+    font-size: 4em;
+} */
 
+.slick-prev {
+    /* left:-px !important; */
+    /* color: red !important; */
+    /* position: absolute !important; */
+    /* z-index: 192; */
+}
+.slick-prev .slick-next {
+    background: black !important;
+}
+
+.slick-prev:before, .slick-next:before {
+    /* font-family: 'Font Awesome 5 Brands' !important; */
+    /* content: "\f054" ; */
+    font-weight: 400;
+    font-size:30px !important;
+    /* line-height: 1; */
+    /* opacity: .75; */
+    color: black !important;
 }

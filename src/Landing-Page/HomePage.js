@@ -119,7 +119,7 @@ function HomePage() {
           </div>
           <div className="col-xs-12" style={{ position: "", marginTop: "-50px", paddingBottom: "50px", ZIndex: -11 }}>
             <div className="searchicon2">
-              <Row  className="categorySection" style={{ marginTop: '-90px' }}>
+              <Row  className="categorySection" style={{ marginTop: '-60px' }}>
 
                 <Col sm={6} md={{ span: 8, offset: 2 }} >
                   <Card style={{ width: '100%', borderRadius: '10px' }}>
@@ -231,7 +231,7 @@ function HomePage() {
               fontWeight: '900',
               fontSize: '30px'
             }}>How Edito Can  <span style={{ color: '#0278FF' }}> Help You?</span></h4>
-            <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
+            <Tab.Container id="list-group-tabs-example me-auto" defaultActiveKey="#link1">
               <Row>
                 {/* <Col>
              <div className="Ofering section">
@@ -274,13 +274,17 @@ function HomePage() {
 
                   </ListGroup>
                 </Col>
-                <Col sm={6}>
-                  <Tab.Content>
-                    <Tab.Pane eventKey="#link1">
+                <Col sm={6} md={6} >
+                  <Tab.Content >
+                    <Tab.Pane  eventKey="#link1">
+                      <Container>
                       <img src={require('../assets/images/vasily-koloda-8CqDvPuo_kI-unsplash@2x.png').default} width="500" height="400" />
+                      </Container>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="#link2">
+                    <Tab.Pane   eventKey="#link2">
+                      <Container>
                       <img src={require('../assets/images/vasily-koloda-8CqDvPuo_kI-unsplash@2x.png').default} width="500" height="400" />
+                      </Container>
                     </Tab.Pane>
                   </Tab.Content>
                 </Col>
@@ -291,8 +295,8 @@ function HomePage() {
       </section>
       <section className="py-5" style={{ minHeight: '400px', width: '100%' }}>
         <Container>
-          <Row>
-            <Col className="bannerImage p-0" sm md={{ span: 9, offset: 1 }} style={{ width: '100%'}}>
+          <Row md={12}>
+            <Col className="bannerImage  p-0" sm md={{ span: 8, offset:2 }}>
                   <Row>
                     <Col sm={4} md={8} className="bannerCircle" >
                       <Card.Text  className="py-2" >
@@ -317,8 +321,9 @@ function HomePage() {
       <section className="blogSection" style={{ width: '100%' }} >
         <Container>
           <div className="py-4">
+            <Container>
             <Row>
-              <Col className="py-4" sm>
+              <Col className="py-4" md={4} sm>
                 <div style={{  width: '100%', paddingTop: '60px' }}>
                   {/* <Card.Img variant="top" src={require('../assets/images/harvard-university-cambridge-usa@2x.png').default} /> */}
                   <Card.Body>
@@ -337,7 +342,7 @@ function HomePage() {
                   </Card.Body>
                 </div>
               </Col>
-              <Col  className="py-4" sm>
+              <Col  className="py-4" md={4} sm>
                 <Card style={{  width: '100%' }}>
                   <Card.Img variant="top" src={require('../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
                   <Card.Body>
@@ -349,7 +354,7 @@ function HomePage() {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col  className="py-4" sm>
+              <Col  className="py-4" md={4} sm>
                 <Card style={{  width: '100%' }}>
                   <Card.Img variant="top" src={require('../assets/images/anete-lusina-rFKBUwLg_WQ-unsplash@2x.png').default} />
                   <Card.Body>
@@ -362,6 +367,7 @@ function HomePage() {
                 </Card>
               </Col>
             </Row>
+            </Container>
           </div>
           <div>
             <Row>
@@ -377,7 +383,7 @@ function HomePage() {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col  className="py-4" sm>
+              <Col  className="py-4" md={4} sm>
                 <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
                   <Card.Body>
@@ -389,7 +395,7 @@ function HomePage() {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col  className="py-4" sm>
+              <Col  className="py-4" md={4} sm>
                 <Card style={{  width: '100%', height: '360px', backgroundColor: '#002B64', color: 'white' }}>
                   {/* <Card.Img variant="top" src={require('../assets/images/anete-lusina-rFKBUwLg_WQ-unsplash@2x.png').default} /> */}
                   <Card.Body>

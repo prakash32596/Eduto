@@ -2,9 +2,44 @@ import React, { useState } from 'react';
 import './About.css';
 import { Carousel } from 'react-bootstrap';
 import { Card, Row, Col, Container, Navbar, Nav, Button, Form, FormControl, FloatingLabel } from 'react-bootstrap';
-
+import Slider from 'react-slick';
 
 const About = () => {
+  const settings = {
+    dots: false,
+    arrows: true,
+    accessibility: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1.1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <div className="About">
       <section className="sliderSelection">
@@ -28,23 +63,7 @@ const About = () => {
               height="400"
               alt="Second slide"
             />
-            {/* <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption> */}
           </Carousel.Item>
-          {/* <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Third slide&bg=20232a"
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </Carousel.Caption>
-          </Carousel.Item> */}
         </Carousel>
       </section>
       <section className="py-5">
@@ -126,10 +145,10 @@ const About = () => {
                           <Nav.Link className="navTabLink" href="#">Visit College Website <i class="fa fa-angle-right" style={{ paddingLeft: '36px' }} aria-hidden="true"></i></Nav.Link>
                         </Nav.Item>
                         <Nav.Item className="navTabItem">
-                          <Nav.Link className="navTabLink" eventKey="link-1">View Online Application <i class="fa fa-angle-right" style={{ paddingLeft: '28px' }} aria-hidden="true"></i></Nav.Link>
+                          <Nav.Link className="navTabLink" eventKey="link-1">View Online Application <i class="fa fa-angle-right" style={{ paddingLeft: '20px' }} aria-hidden="true"></i></Nav.Link>
                         </Nav.Item>
                         <Nav.Item className="navTabItem">
-                          <Nav.Link className="navTabLink" eventKey="link-2">Estimate Your Net Cost <i class="fa fa-angle-right" style={{ paddingLeft: '36px' }} aria-hidden="true"></i></Nav.Link>
+                          <Nav.Link className="navTabLink" eventKey="link-2">Estimate Your Net Cost <i class="fa fa-angle-right" style={{ paddingLeft: '20px' }} aria-hidden="true"></i></Nav.Link>
                         </Nav.Item>
                       </Nav>
                       <h5 className="py-4">Contact Information</h5>
@@ -172,19 +191,19 @@ const About = () => {
                     <Row>
                       <Col md={1}>
                         <div className="py-1">
-                        <img
-                          className="d-block"
-                          src={require('../../assets/images/Ellipse 11.png').default}
-                          width="50"
-                          height="50"
-                          alt="First slide"
-                        />
+                          <img
+                            className="d-block"
+                            src={require('../../assets/images/Ellipse 11.png').default}
+                            width="50"
+                            height="50"
+                            alt="First slide"
+                          />
                         </div>
                       </Col>
                       <Col md={11}>
                         <div>
                           <p className="p-0">
-                            Puneet Singh <br/>
+                            Puneet Singh <br />
                             <span>2016-02-17 18:07:11</span>
                           </p>
                           <p>
@@ -196,24 +215,24 @@ const About = () => {
                         </div>
                       </Col>
                     </Row>
-                    
-                    <hr/>
+
+                    <hr />
                     <Row>
                       <Col md={1}>
                         <div className="py-1">
-                        <img
-                          className="d-block"
-                          src={require('../../assets/images/Ellipse 12.png').default}
-                          width="50"
-                          height="50"
-                          alt="First slide"
-                        />
+                          <img
+                            className="d-block"
+                            src={require('../../assets/images/Ellipse 12.png').default}
+                            width="50"
+                            height="50"
+                            alt="First slide"
+                          />
                         </div>
                       </Col>
                       <Col md={11}>
                         <div>
                           <p className="p-0">
-                            Puneet Singh <br/>
+                            Puneet Singh <br />
                             <span>2016-02-17 18:07:11</span>
                           </p>
                           <p className="p-0">
@@ -225,23 +244,23 @@ const About = () => {
                         </div>
                       </Col>
                     </Row>
-                    <hr/>
+                    <hr />
                     <Row>
                       <Col md={1}>
                         <div className="py-1">
-                        <img
-                          className="d-block"
-                          src={require('../../assets/images/Ellipse 13.png').default}
-                          width="50"
-                          height="50"
-                          alt="First slide"
-                        />
+                          <img
+                            className="d-block"
+                            src={require('../../assets/images/Ellipse 13.png').default}
+                            width="50"
+                            height="50"
+                            alt="First slide"
+                          />
                         </div>
                       </Col>
                       <Col md={11}>
                         <div>
                           <p className="p-0">
-                            Puneet Singh <br/>
+                            Puneet Singh <br />
                             <span>2016-02-17 18:07:11</span>
                           </p>
                           <p>
@@ -291,7 +310,7 @@ const About = () => {
                     <img
                       className="d-block w-100"
                       src={require('../../assets/images/image (3)@2x.png').default}
-                      height="400"
+                      height="auto"
                       alt="Second slide"
                     />
                   </div>
@@ -299,12 +318,129 @@ const About = () => {
                     <img
                       className="d-block w-100"
                       src={require('../../assets/images/image (4)@2x.png').default}
-                      height="400"
+                      height="auto"
                       alt="Second slide"
                     />
                   </div>
                 </Col>
               </Row>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div>
+                <h5> Find More Colleges Like This</h5>
+                <Slider {...settings}>
+                  <div className="p-1">
+                    <Card style={{ width: '100%' }}>
+                      <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
+                      <Card.Body>
+                        <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
+                        <Card.Text className="d-flex justify-content-center">
+                          Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        </Card.Text>
+                        {/* <Button variant="primary">Go somewhere</Button> */}
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="p-1">
+                    <Card style={{ width: '100%' }}>
+                      <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
+                      <Card.Body>
+                        <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
+                        <Card.Text className="d-flex justify-content-center">
+                          Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        </Card.Text>
+                        {/* <Button variant="primary">Go somewhere</Button> */}
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="p-1">
+                    <Card style={{ width: '100%' }}>
+                      <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
+                      <Card.Body>
+                        <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
+                        <Card.Text className="d-flex justify-content-center">
+                          Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        </Card.Text>
+                        {/* <Button variant="primary">Go somewhere</Button> */}
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="p-1">
+                    <Card style={{ width: '100%' }}>
+                      <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
+                      <Card.Body>
+                        <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
+                        <Card.Text className="d-flex justify-content-center">
+                          Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        </Card.Text>
+                        {/* <Button variant="primary">Go somewhere</Button> */}
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="p-1">
+                    <Card style={{ width: '100%' }}>
+                      <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
+                      <Card.Body>
+                        <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
+                        <Card.Text className="d-flex justify-content-center">
+                          Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        </Card.Text>
+                        {/* <Button variant="primary">Go somewhere</Button> */}
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="p-1">
+                    <Card style={{ width: '100%' }}>
+                      <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
+                      <Card.Body>
+                        <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
+                        <Card.Text className="d-flex justify-content-center">
+                          Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        </Card.Text>
+                        {/* <Button variant="primary">Go somewhere</Button> */}
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="p-1">
+                    <Card style={{ width: '100%' }}>
+                      <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
+                      <Card.Body>
+                        <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
+                        <Card.Text className="d-flex justify-content-center">
+                          Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        </Card.Text>
+                        {/* <Button variant="primary">Go somewhere</Button> */}
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="p-1">
+                    <Card style={{ width: '100%' }}>
+                      <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
+                      <Card.Body>
+                        <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
+                        <Card.Text className="d-flex justify-content-center">
+                          Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        </Card.Text>
+                        {/* <Button variant="primary">Go somewhere</Button> */}
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div className="p-1">
+                    <Card style={{ width: '100%' }}>
+                      <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
+                      <Card.Body>
+                        <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
+                        <Card.Text className="d-flex justify-content-center">
+                          Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        </Card.Text>
+                        {/* <Button variant="primary">Go somewhere</Button> */}
+                      </Card.Body>
+                    </Card>
+                  </div>
+                </Slider>
+              </div>
             </Col>
           </Row>
         </Container>

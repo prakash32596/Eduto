@@ -20,7 +20,7 @@ const MainScreen = () => {
             <PrimaryHeader />
             <SecondaryHeader />
             <section className="p-0">
-            <About />
+               <About />
             </section>
             <Footer />
         </div>
