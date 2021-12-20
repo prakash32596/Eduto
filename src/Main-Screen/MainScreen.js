@@ -17,7 +17,7 @@ import Footer from '../Components/footer/Footer';
 const MainScreen = () => {
     return (
         <div className="MainScreen">
-            <PrimaryHeader />
+            <PrimaryHeader className="m-display" />
             <SecondaryHeader />
             <section className="p-0">
                <About />

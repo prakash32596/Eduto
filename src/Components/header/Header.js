@@ -35,18 +35,21 @@ function Header() {
           {/* <div></div> */}
     <Navbar.Toggle aria-controls="basic-navbar-nav " onClick={handleShow} />
     {/* </Navbar.Collapse> */}
-    <Offcanvas className="mobileMenu" show={show} onHide={handleClose} placement="bottom">
+    <Offcanvas className="mobileMenu justify-content-start d-flex" show={show} onHide={handleClose} placement="bottom">
         {/* <Offcanvas.Header closeButton>
         </Offcanvas.Header> */}
         <Offcanvas.Body>
-        <Nav className="me-auto navBar">
+        <Nav className="navBar">
             <Nav.Link as={Link}  className="navItem active" to="/">Home</Nav.Link>
             <Nav.Link as={Link}  className="navItem" to="/About" >Courses</Nav.Link>
             <Nav.Link as={Link}  className="navItem" to="/College/Universities">College/Universities</Nav.Link>
             <Nav.Link as={Link}  className="navItem" to="/Get Involved">Get Involved</Nav.Link>
+            <Nav.Link as={Link}  className="navItem" to="/College/Universities">Products</Nav.Link>
+            <Nav.Link as={Link}  className="navItem" to="/Get Involved">Pricing</Nav.Link>
+            <Nav.Link as={Link}  className="navItem" to="/College/Universities">Docs</Nav.Link>
+            <Nav.Link as={Link}  className="navItem" to="/Get Involved">Login</Nav.Link>
           </Nav>
           {/* <div></div> */}
-            <Button id="navSignupButton" href="#"> Signup</Button> 
         </Offcanvas.Body>
       </Offcanvas>
     </Container>

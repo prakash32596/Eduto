@@ -226,4 +226,7 @@
 .sponsoredTag{
   margin-top: -17px !important;
 }
+.m-display{
+  display: none !important;
+}
 }

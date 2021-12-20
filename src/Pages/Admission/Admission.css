@@ -2,6 +2,10 @@
     /* width: 100%;
     margin:0; */
    }
+
+.d-display{
+    display: none !important;
+}
    
 .navTabLink{
     color: black !important;
@@ -25,8 +29,8 @@
 }
 
 .slick-prev:before, .slick-next:before {
-    /* font-family: 'Font Awesome 5 Brands' !important; */
-    /* content: "\f054" ; */
+    font-family: 'Font Awesome 5 Brands' !important;
+    content: "\f054" !important;
     font-weight: 400;
     font-size:30px !important;
     /* line-height: 1; */
@@ -50,3 +54,16 @@
     border-color:rgba(20, 20, 20, 0.068);;
     border-style: solid;
 }
+
+@media screen 
+  and (max-width: 480px) {
+  .m-display{
+      display: none !important;
+  }
+  .cardBanner{
+      height: 150px;
+  }
+  .cardBannerImg{
+      height: 150px;
+  }
+  }

@@ -14,7 +14,7 @@ function HomePage() {
       <section className="search" style={{ width: '100%', position: "", marginTop: '-77px', }}>
         <Container>
           <div className="searchicon">
-            <Row>
+            <Row className="m-display">
               <Col sm={12} xs={12} md={4} >
                 <Card className="d-flex justify-contnent-end" style={{ width: '16rem', height: '80px' }}>
                   <Card.Body className="p-0">
@@ -81,7 +81,7 @@ function HomePage() {
                 </div>
               </Col>
             </Row>
-            <Row >
+            <Row className="m-display" >
               <Col md={4}>
                 <Card style={{ width: '12rem', borderRadius: '10px', marginLeft: '-30px' }}>
                   <Card.Body>
@@ -175,8 +175,8 @@ function HomePage() {
       </section>
       <section className="editoSection" style={{ width: '100%' }}>
         <Container>
-          <div  >
-            <h4 className="headingSection d-flex justify-content-center py-5" style={{
+          <div >
+            <h4 className="headingSection d-flex justify-content-center p-0" style={{
               fontFamily: 'inter',
               fontWeight: '900',
               fontSize: '30px'

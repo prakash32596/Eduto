@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Slider from 'react-slick';
 import Header from '../../Components/header/Header';
+import PrimaryHeader from '../../Components/header/PrimaryHeader';
 
 const Admission = () => {
     const settings = {
@@ -21,6 +22,8 @@ const Admission = () => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
+        autoplay:true,
+        autoplaySpeed:3000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -42,7 +45,7 @@ const Admission = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 1.05,
                     slidesToScroll: 1
                 }
             }
@@ -50,20 +53,24 @@ const Admission = () => {
     };
     return (
         <div className="About">
+            <PrimaryHeader/>
             <Header />
             <section className="sliderSelection">
-                <Card className="bg-dark text-white">
-                    <Card.Img src={require('../../assets/images/Group 30886.png').default} alt="Card image" />
+                <Card className="bg-dark text-white cardBanner">
+                    <Card.Img className="cardBannerImg" src={require('../../assets/images/Group 30886.png').default} alt="Card image" />
                     <Card.ImgOverlay>
+                    <Card.Text className="d-display">
+                        <h6 style={{ fontSize: '30px', fontFamily: 'Inter', fontWeight: '600',marginTop:'70px' }}>Online MBA</h6>
+                  </Card.Text> 
                         <Card.Text className="px-5" style={{ marginTop: '190px' }}>
                             <Row>
                                 <Col md={{ span: 6 }}>
-                                    <div className="px-5">
-                                        <span className="px-5" style={{ fontSize: '30px', fontFamily: 'Inter', fontWeight: '600' }}>Online MBA</span>
+                                    <div className="px-5 m-display">
+                                        <span className="px-5" style={{ fontSize: '25px', fontFamily: 'Inter', fontWeight: '600' }}>Online MBA</span>
                                     </div>
                                 </Col>
-                                <Col className="d-flex" md={{ span: 3, offset: 3 }} >
-                                    <div className="justify-contetn-center">
+                                <Col className="d-flex m-display" md={{ span: 3, offset: 3 }} >
+                                    <div className="justify-contetn-center m-display">
                                         <span className=" justify-content-center p-2"><Button variant="light"><img width={20} src={require('../../assets/images/connection.png').default}/> Connect With Our Experts</Button></span>
                                     </div>
                                 </Col>
@@ -73,7 +80,7 @@ const Admission = () => {
                     </Card.ImgOverlay>
                 </Card>
             </section>
-            <section className="py-4 px-1">
+            <section className="py-2 px-1">
                 <Container>
                     <Row>
                         <Col>
@@ -339,119 +346,443 @@ const Admission = () => {
                     </Row>
                     <Row>
                         <Col>
-                            <div>
-                                <h5> Find More Colleges Like This</h5>
-                                <Slider {...settings}>
-                                    <div className="p-1">
-                                        <Card style={{ width: '100%' }}>
-                                            <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
-                                            <Card.Body>
-                                                <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
-                                                <Card.Text className="d-flex justify-content-center">
-                                                    Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                </Card.Text>
-                                                {/* <Button variant="primary">Go somewhere</Button> */}
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                    <div className="p-1">
-                                        <Card style={{ width: '100%' }}>
-                                            <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
-                                            <Card.Body>
-                                                <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
-                                                <Card.Text className="d-flex justify-content-center">
-                                                    Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                </Card.Text>
-                                                {/* <Button variant="primary">Go somewhere</Button> */}
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                    <div className="p-1">
-                                        <Card style={{ width: '100%' }}>
-                                            <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
-                                            <Card.Body>
-                                                <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
-                                                <Card.Text className="d-flex justify-content-center">
-                                                    Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                </Card.Text>
-                                                {/* <Button variant="primary">Go somewhere</Button> */}
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                    <div className="p-1">
-                                        <Card style={{ width: '100%' }}>
-                                            <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
-                                            <Card.Body>
-                                                <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
-                                                <Card.Text className="d-flex justify-content-center">
-                                                    Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                </Card.Text>
-                                                {/* <Button variant="primary">Go somewhere</Button> */}
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                    <div className="p-1">
-                                        <Card style={{ width: '100%' }}>
-                                            <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
-                                            <Card.Body>
-                                                <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
-                                                <Card.Text className="d-flex justify-content-center">
-                                                    Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                </Card.Text>
-                                                {/* <Button variant="primary">Go somewhere</Button> */}
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                    <div className="p-1">
-                                        <Card style={{ width: '100%' }}>
-                                            <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
-                                            <Card.Body>
-                                                <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
-                                                <Card.Text className="d-flex justify-content-center">
-                                                    Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                </Card.Text>
-                                                {/* <Button variant="primary">Go somewhere</Button> */}
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                    <div className="p-1">
-                                        <Card style={{ width: '100%' }}>
-                                            <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
-                                            <Card.Body>
-                                                <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
-                                                <Card.Text className="d-flex justify-content-center">
-                                                    Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                </Card.Text>
-                                                {/* <Button variant="primary">Go somewhere</Button> */}
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                    <div className="p-1">
-                                        <Card style={{ width: '100%' }}>
-                                            <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
-                                            <Card.Body>
-                                                <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
-                                                <Card.Text className="d-flex justify-content-center">
-                                                    Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                </Card.Text>
-                                                {/* <Button variant="primary">Go somewhere</Button> */}
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                    <div className="p-1">
-                                        <Card style={{ width: '100%' }}>
-                                            <Card.Img variant="top" src={require('../../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
-                                            <Card.Body>
-                                                <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
-                                                <Card.Text className="d-flex justify-content-center">
-                                                    Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                </Card.Text>
-                                                {/* <Button variant="primary">Go somewhere</Button> */}
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                </Slider>
-                            </div>
+                        <div>
+            <h5> Find More Colleges Like This</h5>
+            <Slider {...settings}>
+              <div className="p-1">
+                <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-map-marker" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">Delhi, India</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-info-circle" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">4-Year</span>
+                          <span className="p-1" style={{ fontSize: '13px' }}><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Private</span>
+                          <span style={{ fontSize: '13px' }} className="p-1"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Medium</span>
+                          <span style={{ fontSize: '13px' }} className="p-0"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="p-0">Urban</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+                          <span style={{ fontSize: '14px' }}>Courses Offered</span><br />
+                          <span style={{ fontSize: '14px' }}>B.E./B.Tech, M.E./M.Tech, B.Sc... 4 More</span>
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+                <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-map-marker" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">Delhi, India</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-info-circle" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">4-Year</span>
+                          <span className="p-1" style={{ fontSize: '13px' }}><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Private</span>
+                          <span style={{ fontSize: '13px' }} className="p-1"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Medium</span>
+                          <span style={{ fontSize: '13px' }} className="p-0"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="p-0">Urban</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+                          <span style={{ fontSize: '14px' }}>Courses Offered</span><br />
+                          <span style={{ fontSize: '14px' }}>B.E./B.Tech, M.E./M.Tech, B.Sc... 4 More</span>
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+                <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-map-marker" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">Delhi, India</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-info-circle" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">4-Year</span>
+                          <span className="p-1" style={{ fontSize: '13px' }}><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Private</span>
+                          <span style={{ fontSize: '13px' }} className="p-1"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Medium</span>
+                          <span style={{ fontSize: '13px' }} className="p-0"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="p-0">Urban</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+                          <span style={{ fontSize: '14px' }}>Courses Offered</span><br />
+                          <span style={{ fontSize: '14px' }}>B.E./B.Tech, M.E./M.Tech, B.Sc... 4 More</span>
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+              <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-map-marker" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">Delhi, India</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-info-circle" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">4-Year</span>
+                          <span className="p-1" style={{ fontSize: '13px' }}><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Private</span>
+                          <span style={{ fontSize: '13px' }} className="p-1"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Medium</span>
+                          <span style={{ fontSize: '13px' }} className="p-0"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="p-0">Urban</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+                          <span style={{ fontSize: '14px' }}>Courses Offered</span><br />
+                          <span style={{ fontSize: '14px' }}>B.E./B.Tech, M.E./M.Tech, B.Sc... 4 More</span>
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+              <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-map-marker" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">Delhi, India</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-info-circle" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">4-Year</span>
+                          <span className="p-1" style={{ fontSize: '13px' }}><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Private</span>
+                          <span style={{ fontSize: '13px' }} className="p-1"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Medium</span>
+                          <span style={{ fontSize: '13px' }} className="p-0"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="p-0">Urban</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+                          <span style={{ fontSize: '14px' }}>Courses Offered</span><br />
+                          <span style={{ fontSize: '14px' }}>B.E./B.Tech, M.E./M.Tech, B.Sc... 4 More</span>
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+                <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-map-marker" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">Delhi, India</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-info-circle" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">4-Year</span>
+                          <span className="p-1" style={{ fontSize: '13px' }}><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Private</span>
+                          <span style={{ fontSize: '13px' }} className="p-1"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Medium</span>
+                          <span style={{ fontSize: '13px' }} className="p-0"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="p-0">Urban</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+                          <span style={{ fontSize: '14px' }}>Courses Offered</span><br />
+                          <span style={{ fontSize: '14px' }}>B.E./B.Tech, M.E./M.Tech, B.Sc... 4 More</span>
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+                <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-map-marker" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">Delhi, India</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-info-circle" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">4-Year</span>
+                          <span className="p-1" style={{ fontSize: '13px' }}><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Private</span>
+                          <span style={{ fontSize: '13px' }} className="p-1"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Medium</span>
+                          <span style={{ fontSize: '13px' }} className="p-0"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="p-0">Urban</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+                          <span style={{ fontSize: '14px' }}>Courses Offered</span><br />
+                          <span style={{ fontSize: '14px' }}>B.E./B.Tech, M.E./M.Tech, B.Sc... 4 More</span>
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+                <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-map-marker" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">Delhi, India</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-info-circle" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">4-Year</span>
+                          <span className="p-1" style={{ fontSize: '13px' }}><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Private</span>
+                          <span style={{ fontSize: '13px' }} className="p-1"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Medium</span>
+                          <span style={{ fontSize: '13px' }} className="p-0"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="p-0">Urban</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+                          <span style={{ fontSize: '14px' }}>Courses Offered</span><br />
+                          <span style={{ fontSize: '14px' }}>B.E./B.Tech, M.E./M.Tech, B.Sc... 4 More</span>
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+                <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-map-marker" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">Delhi, India</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-info-circle" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">4-Year</span>
+                          <span className="p-1" style={{ fontSize: '13px' }}><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Private</span>
+                          <span style={{ fontSize: '13px' }} className="p-1"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Medium</span>
+                          <span style={{ fontSize: '13px' }} className="p-0"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="p-0">Urban</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+                          <span style={{ fontSize: '14px' }}>Courses Offered</span><br />
+                          <span style={{ fontSize: '14px' }}>B.E./B.Tech, M.E./M.Tech, B.Sc... 4 More</span>
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+            </Slider>
+          </div>
                         </Col>
                     </Row>
                 </Container>

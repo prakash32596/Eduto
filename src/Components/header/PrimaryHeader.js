@@ -11,9 +11,9 @@ import { render } from '@testing-library/react';
 const  PrimaryHeader = () =>{
 
     return (
-      <div className="primaryHeader">
+      <div className="primaryHeader m-display">
        
-        <Navbar className="primaryNav" expand="lg">
+        <Navbar className="primaryNav " expand="lg">
       <Container>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
