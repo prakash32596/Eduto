@@ -34,5 +34,21 @@ box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75);
   .m-display{
       display: none !important;
   }
-
+  /* mobile menu */
+  .mobileBrandLogo{
+    font-size: 36px !important;
+    color: #002B64 !important;;
+}
+.mobileMenu{
+    height: auto !important;
+}
+.navMobileMenu{
+    color:black !important ;
+    font-size: 16px !important;
+    font-family: 'Inter';
+    font-weight: 600;
+}
+.navMobileMenu:hover{
+    color: #0178FF !important;
+}
   }

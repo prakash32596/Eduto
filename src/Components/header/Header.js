@@ -39,15 +39,16 @@ function Header() {
         {/* <Offcanvas.Header closeButton>
         </Offcanvas.Header> */}
         <Offcanvas.Body>
-        <Nav className="navBar">
-            <Nav.Link as={Link}  className="navItem active" to="/">Home</Nav.Link>
-            <Nav.Link as={Link}  className="navItem" to="/About" >Courses</Nav.Link>
-            <Nav.Link as={Link}  className="navItem" to="/College/Universities">College/Universities</Nav.Link>
-            <Nav.Link as={Link}  className="navItem" to="/Get Involved">Get Involved</Nav.Link>
-            <Nav.Link as={Link}  className="navItem" to="/College/Universities">Products</Nav.Link>
-            <Nav.Link as={Link}  className="navItem" to="/Get Involved">Pricing</Nav.Link>
-            <Nav.Link as={Link}  className="navItem" to="/College/Universities">Docs</Nav.Link>
-            <Nav.Link as={Link}  className="navItem" to="/Get Involved">Login</Nav.Link>
+        <Nav className="navBar px-2">
+        <Navbar.Brand className="brandLogo mobileBrandLogo" href="#home">Eduto .</Navbar.Brand>
+            <Nav.Link as={Link}  className="navMobileMenu active" to="/">Home</Nav.Link>
+            <Nav.Link as={Link}  className="navMobileMenu" to="/About" >Courses</Nav.Link>
+            <Nav.Link as={Link}  className="navMobileMenu" to="/College/Universities">College/Universities</Nav.Link>
+            <Nav.Link as={Link}  className="navMobileMenu" to="/Get Involved">Get Involved</Nav.Link>
+            <Nav.Link as={Link}  className="navMobileMenu" to="/College/Universities">Products</Nav.Link>
+            <Nav.Link as={Link}  className="navMobileMenu" to="/Get Involved">Pricing</Nav.Link>
+            <Nav.Link as={Link}  className="navMobileMenu" to="/College/Universities">Docs</Nav.Link>
+            <Nav.Link as={Link}  className="navMobileMenu" to="/Get Involved">Login</Nav.Link>
           </Nav>
           {/* <div></div> */}
         </Offcanvas.Body>

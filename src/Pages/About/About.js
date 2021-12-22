@@ -194,7 +194,7 @@ const About = () => {
                   </div>
                   <div className="py-4" style={{}}>
                     <Row>
-                      <Col md={1}>
+                      <Col xs={2} md={1}>
                         <div className="py-1">
                           <img
                             className="d-block"
@@ -205,25 +205,24 @@ const About = () => {
                           />
                         </div>
                       </Col>
-                      <Col md={11}>
+                      <Col xs={8} md={11}>
                         <div>
-                          <p className="p-0">
+                          <p className="py-1">
                             Puneet Singh <br />
                             <span>2016-02-17 18:07:11</span>
                           </p>
-                          <p>
+                        </div>
+                      </Col>
+                          <p className="px-4">
                             Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
                             Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
                             Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
 
                           </p>
-                        </div>
-                      </Col>
                     </Row>
-
                     <hr />
                     <Row>
-                      <Col md={1}>
+                      <Col xs={2} md={1}>
                         <div className="py-1">
                           <img
                             className="d-block"
@@ -234,24 +233,24 @@ const About = () => {
                           />
                         </div>
                       </Col>
-                      <Col md={11}>
+                      <Col xs={8} md={11}>
                         <div>
                           <p className="p-0">
                             Puneet Singh <br />
                             <span>2016-02-17 18:07:11</span>
                           </p>
-                          <p className="p-0">
+                        </div>
+                      </Col>
+                          <p className="px-4">
                             Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
                             Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
                             Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
 
                           </p>
-                        </div>
-                      </Col>
                     </Row>
                     <hr />
                     <Row>
-                      <Col md={1}>
+                      <Col xs={2} md={1}>
                         <div className="py-1">
                           <img
                             className="d-block"
@@ -262,20 +261,20 @@ const About = () => {
                           />
                         </div>
                       </Col>
-                      <Col md={11}>
+                      <Col xs={8} md={11}>
                         <div>
                           <p className="p-0">
                             Puneet Singh <br />
                             <span>2016-02-17 18:07:11</span>
                           </p>
-                          <p>
+                        </div>
+                      </Col>
+                          <p className="px-4">
                             Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
                             Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
                             Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
 
                           </p>
-                        </div>
-                      </Col>
                     </Row>
                   </div>
                   <hr />

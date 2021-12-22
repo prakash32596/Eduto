@@ -12,7 +12,7 @@
     font-family: 'Inter';
     font-size: 1.67rem !important;
     font-weight: bold;
-    color:#001632;
+    color:#002B64 !important;
 }
 .navItem{
     color:#001632 !important;
@@ -99,8 +99,23 @@
         background: #0178FF;
         /* z-index: 22; */
     } 
+
+    /* mobile menu */
+    .mobileBrandLogo{
+        font-size: 36px !important;
+        color: #002B64 !important;;
+    }
     .mobileMenu{
         height: auto !important;
+    }
+    .navMobileMenu{
+        color:black !important ;
+        font-size: 16px !important;
+        font-family: 'Inter';
+        font-weight: 600;
+    }
+    .navMobileMenu:hover{
+        color: #0178FF !important;
     }
 
 }

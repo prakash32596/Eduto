@@ -12,6 +12,8 @@ import {
 import Slider from 'react-slick';
 import Header from '../../Components/header/Header';
 import PrimaryHeader from '../../Components/header/PrimaryHeader';
+import FloatButton from '../../Utilities/FloatingButton/FloatButton'
+import Footer from '../../Components/footer/Footer';
 
 const Admission = () => {
     const settings = {
@@ -59,9 +61,9 @@ const Admission = () => {
                 <Card className="bg-dark text-white cardBanner">
                     <Card.Img className="cardBannerImg" src={require('../../assets/images/Group 30886.png').default} alt="Card image" />
                     <Card.ImgOverlay>
-                    <Card.Text className="d-display">
+                    <Card.Text className="mobileText">
                         <h6 style={{ fontSize: '30px', fontFamily: 'Inter', fontWeight: '600',marginTop:'70px' }}>Online MBA</h6>
-                  </Card.Text> 
+                    </Card.Text> 
                         <Card.Text className="px-5" style={{ marginTop: '190px' }}>
                             <Row>
                                 <Col md={{ span: 6 }}>
@@ -787,6 +789,8 @@ const Admission = () => {
                     </Row>
                 </Container>
             </section>
+                    <FloatButton styles={{right:'0 !important'}}></FloatButton>
+                <Footer/>
         </div>
 
     );

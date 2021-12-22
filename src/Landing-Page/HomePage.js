@@ -5,9 +5,47 @@ import './HomePage.css';
 import { Container, Card, Col, Row, Navbar, Nav, ListGroup, Tab, Image, NavDropdown, InputGroup, InputForm, Form, FormControl, Button } from 'react-bootstrap';
 import Header from '../Components/header/Header';
 import Footer from '../Components/footer/Footer';
+import Slider from 'react-slick';
 
 
-function HomePage() {
+function HomePage() {  const settings = {
+  dots: false,
+  arrows: true,
+  accessibility: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay:true,
+  autoplaySpeed:3000,
+  responsive: [
+      {
+          breakpoint: 1024,
+          settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+          }
+      },
+      {
+          breakpoint: 600,
+          settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+          }
+      },
+      {
+          breakpoint: 480,
+          settings: {
+              slidesToShow: 1.05,
+              slidesToScroll: 1
+          }
+      }
+  ]
+};
+
   return (
     <div className="mainHomepage">
       <Header/>
@@ -57,17 +95,18 @@ function HomePage() {
                 </Card>
               </Col>
             </Row>
-            <Row>
+            <Row className="" >
               <Col sm={12}  md={12} >
 
 
-                <h1 className=" text headingSection d-flex justify-content-center p-3" style={{
+                <h1 className="text headingSection text-center justify-content-center p-3" style={{
                   fontFamily: 'inter',
                   fontWeight: '900',
                   fontSize: '52px'
                 }}>Find The Right College For <span xs={4} style={{ color: '#0278FF' }}> You</span></h1>
               </Col>
             </Row>
+          
             <Row>
               <Col md={{ span: 6, offset: 3 }}>
                 <div className="seachSection">
@@ -124,39 +163,38 @@ function HomePage() {
                 <Col sm={6} md={{ span: 8, offset: 2 }} >
                   <Card style={{ width: '100%', borderRadius: '10px' }}>
                     <Card.Body style={{ width: '100%'}}>
-                      <p className="text d-flex justify-content-center" style={{ marginTop: '0' }} >Choose A Category To Start Exploring</p>
+                      <p className="text text-center" style={{ marginTop: '0' }} >Choose A Category To Start Exploring</p>
                       <Row>
-                        <Col className="py-2" xs={6} md={3} >
-                          <Card.Title className="d-flex justify-content-center"  >
+                        <Col className="py-2" xs={6} sm={4}  md={3} >
+                          <Card.Title className="text-center"  >
                             <img src={require('../assets/images/location (4).svg').default} width="150" height="40" /></Card.Title>
-                          <Card.Text className="text d-flex justify-content-center" >
+                          <Card.Text className="text text-center" >
                             <span style={{ textAlign: 'center' }}>Location</span>
                           </Card.Text>
 
                         </Col>
-                        <Col className="py-2" xs={6} md={3}>
-                          <Card.Title className="d-flex justify-content-center"  >
+                        <Col className="py-2" xs={6} sm={4} md={3}>
+                          <Card.Title className="text-center"  >
                             <img src={require('../assets/images/school (1).svg').default} width="150" height="40" /></Card.Title>
-                          <Card.Text className="text d-flex justify-content-center" >
-                            <span style={{ textAlign: 'center' }}>Programe</span>
+                          <Card.Text className="text text-center" >
+                            <span >Programe</span>
                           </Card.Text>
 
                         </Col >
-                        <Col className="py-2" xs={6} md={3}>
-                          <Card.Title className="d-flex justify-content-center"  >
+                        <Col className="py-2" xs={6} sm={4} md={3}>
+                          <Card.Title className="text-center"  >
                             <img src={require('../assets/images/campus.svg').default} width="150" height="40" /></Card.Title>
-                          <Card.Text className="text d-flex justify-content-center" >
-                            <span style={{ textAlign: 'center' }}>College Type</span>
+                          <Card.Text className="text text-center" >
+                            <span>College Type</span>
                           </Card.Text>
 
                         </Col>
-                        <Col className="py-2" xs={6} md={3}>
+                        <Col className="py-2" xs={6} sm={4} md={3}>
                           <Card.Title className="d-flex justify-content-center"  >
                             <img src={require('../assets/images/student (2).svg').default} width="150" height="40" /></Card.Title>
-                          <Card.Text className="text d-flex justify-content-center" >
-                            <span style={{ textAlign: 'center' }}>Campus Type</span>
+                          <Card.Text className="text text-center" >
+                            <span>Campus Type</span>
                           </Card.Text>
-
                         </Col>
                       </Row>
                     </Card.Body>
@@ -176,11 +214,11 @@ function HomePage() {
       <section className="editoSection" style={{ width: '100%' }}>
         <Container>
           <div >
-            <h4 className="headingSection d-flex justify-content-center p-0" style={{
+            <h4 className="headingSection d-flex justify-content-center py-5" style={{
               fontFamily: 'inter',
               fontWeight: '900',
               fontSize: '30px'
-            }}>How Edito Can  <span style={{ color: '#0278FF' }}> Help You?</span></h4>
+            }}>How Edito Can <span style={{ color: '#0278FF' }}> Help You?</span></h4>
             <Row>
               <Col className="py-4" sm>
                 <Card style={{ width: '100%' }}>
@@ -277,13 +315,13 @@ function HomePage() {
                 <Col sm={6} md={6} >
                   <Tab.Content >
                     <Tab.Pane  eventKey="#link1">
-                      <Container>
                       <img src={require('../assets/images/vasily-koloda-8CqDvPuo_kI-unsplash@2x.png').default} width="500" height="400" />
+                      <Container>
                       </Container>
                     </Tab.Pane>
                     <Tab.Pane   eventKey="#link2">
-                      <Container>
                       <img src={require('../assets/images/vasily-koloda-8CqDvPuo_kI-unsplash@2x.png').default} width="500" height="400" />
+                      <Container>
                       </Container>
                     </Tab.Pane>
                   </Tab.Content>
@@ -342,7 +380,7 @@ function HomePage() {
                   </Card.Body>
                 </div>
               </Col>
-              <Col  className="py-4" md={4} sm>
+              <Col  className="py-4 m-display" md={4} sm>
                 <Card style={{  width: '100%' }}>
                   <Card.Img variant="top" src={require('../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
                   <Card.Body>
@@ -354,7 +392,7 @@ function HomePage() {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col  className="py-4" md={4} sm>
+              <Col  className="py-4 m-display" md={4} sm>
                 <Card style={{  width: '100%' }}>
                   <Card.Img variant="top" src={require('../assets/images/anete-lusina-rFKBUwLg_WQ-unsplash@2x.png').default} />
                   <Card.Body>
@@ -366,11 +404,65 @@ function HomePage() {
                   </Card.Body>
                 </Card>
               </Col>
+              <div className="d-display">
+              <Slider {...settings}>
+              <div className="p-1">
+              <Card style={{  width: '100%' }}>
+                  <Card.Img variant="top" src={require('../assets/images/mimi-thian-vdXMSiX-n6M-unsplash.png').default} />
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-center"  >Application Guidance</Card.Title>
+                    <Card.Text className="d-flex justify-content-center">
+                      Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+              <Card style={{  width: '100%' }}>
+                  <Card.Img variant="top" src={require('../assets/images/anete-lusina-rFKBUwLg_WQ-unsplash@2x.png').default} />
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-center" >Visa & Travel Advice</Card.Title>
+                    <Card.Text className="d-flex justify-content-center">
+                      Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+              <Card style={{  width: '100%' }}>
+                  <Card.Img variant="top" src={require('../assets/images/harvard-university-cambridge-usa@2x.png').default} />
+                  <Card.Body>
+                    <Card.Title className="text d-flex justify-content-center">Find Your Best Matches</Card.Title>
+                    <Card.Text className="d-flex justify-content-center" >
+                      Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+              <Card style={{  width: '100%' }}>
+                  <Card.Img variant="top" src={require('../assets/images/harvard-university-cambridge-usa@2x.png').default} />
+                  <Card.Body>
+                    <Card.Title className="text d-flex justify-content-center">Find Your Best Matches</Card.Title>
+                    <Card.Text className="d-flex justify-content-center" >
+                      Lorem Ipsum Dolor Sit Amet, Consect Etur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+            </Slider>
+              <p  className="py-5" style={{ textAlign: 'center' }}> <Button href="#" size="lg">Explore More</Button></p>
+
+              </div>
             </Row>
             </Container>
           </div>
           <div>
-            <Row>
+            <Row className="m-display">
               <Col  className="py-4" sm>
                 <Card style={{  width: '100%' }}>
                   <Card.Img variant="top" src={require('../assets/images/harvard-university-cambridge-usa@2x.png').default} />
@@ -435,10 +527,10 @@ function HomePage() {
               <Row >
                 <Col sm={5} md={12} style={{ marginTop: '30px' }}>
                   <Card style={{ width: '100%', height: 'auto' }}>
-                    <Card.Body className="p-0 d-flex justify-content-center">
+                    <Card.Body className="p-0 d-flex justify-content-start">
                       <Row>
                         <Col sm={5} md={4}>
-                          <Card.Title className="d-flex justify-content-center p-3"  ><span style={{ backgroundColor: '#E5FAE9', fontSize: '7px', height: 'auto', textAlign: 'center', padding: '23px', color: 'green', borderRadius: '20%' }}>
+                          <Card.Title className="d-flex justify-content-start p-3"  ><span style={{ backgroundColor: '#E5FAE9', fontSize: '7px', height: 'auto', textAlign: 'center', padding: '23px', color: 'green', borderRadius: '20%' }}>
                             <img src={require('../assets/images/Group 30883.svg').default} width="90" height="90" /></span>
                           </Card.Title>
                         </Col>
@@ -459,10 +551,10 @@ function HomePage() {
               <Row >
                 <Col sm={6} md={12} style={{ marginTop: '30px', paddingBottom: '20px' }}>
                   <Card style={{ width: '100%', height: 'auto' }}>
-                    <Card.Body className="p-0 d-flex justify-content-center">
+                    <Card.Body className="p-0 d-flex justify-content-start">
                       <Row>
                         <Col sm={6} md={4}>
-                          <Card.Title className="d-flex justify-content-center p-3"  ><span style={{ backgroundColor: '#E5FAE9', fontSize: '7px', height: 'auto', textAlign: 'center', padding: '23px', color: 'green', borderRadius: '20%' }}>
+                          <Card.Title className="d-flex justify-content-start p-3"  ><span style={{ backgroundColor: '#E5FAE9', fontSize: '7px', height: 'auto', textAlign: 'center', padding: '23px', color: 'green', borderRadius: '20%' }}>
                             {/* <i class="fa fa-search m-0" style={{ color: '#0278FF',fontSize:'26px' }} aria-hidden="true"></i></span> */}
                             <img src={require('../assets/images/Group 30884.svg').default} width="90" height="90" /></span>
                           </Card.Title>

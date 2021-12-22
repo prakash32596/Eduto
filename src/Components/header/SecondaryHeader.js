@@ -47,11 +47,14 @@ const SecondaryHeader = () => {
         </Offcanvas.Header> */}
         <Offcanvas.Body>
         <Nav className=" navBar">
-              <Nav.Link as={Link} className="navItem" to="/">About</Nav.Link>
-              <Nav.Link as={Link} className="navItem" to="/admission">Admission</Nav.Link>
-              <Nav.Link as={Link} className="navItem" to="#College/Universities">Academics</Nav.Link>
-              <Nav.Link as={Link} className="navItem" to="#Get Involved">Costs</Nav.Link>
-              <Nav.Link as={Link} className="navItem" to="#Get Involved">Campus Life</Nav.Link>
+        <Navbar.Brand className="brandLogo mobileBrandLogo" href="#home">Eduto .</Navbar.Brand>
+              <Nav.Link as={Link} className="navMobileMenu" to="/">About</Nav.Link>
+              <Nav.Link as={Link} className="navMobileMenu" to="/admission">Admission</Nav.Link>
+              <Nav.Link as={Link} className="navMobileMenu" to="#College/Universities">Academics</Nav.Link>
+              <Nav.Link as={Link} className="navMobileMenu" to="#Get Involved">Costs</Nav.Link>
+              <Nav.Link as={Link} className="navMobileMenu" to="#Get Involved">Campus Life</Nav.Link>
+              <Nav.Link as={Link} className="navMobileMenu" to="#Get Involved">Products</Nav.Link>
+              <Nav.Link as={Link} className="navMobileMenu" to="#Get Involved">Login</Nav.Link>
               {/* <NavDropdown
                 id="nav-dropdown-dark-example"
                 title="Others"

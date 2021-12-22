@@ -3,8 +3,8 @@
     margin:0; */
    }
 
-.d-display{
-    display: none !important;
+.mobileText{
+    display: none;
 }
    
 .navTabLink{
@@ -66,4 +66,7 @@
   .cardBannerImg{
       height: 150px;
   }
+  .mobileText{
+    display: revert;
+}
   }
