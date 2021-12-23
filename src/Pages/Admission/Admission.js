@@ -206,100 +206,99 @@ const Admission = () => {
                                         </Button>
                                     </div>
                                     <div className="py-4" style={{}}>
-                                        <Row>
-                                            <Col md={1}>
-                                                <div className="py-1">
-                                                    <img
-                                                        className="d-block"
-                                                        src={require('../../assets/images/Ellipse 11.png').default}
-                                                        width="50"
-                                                        height="50"
-                                                        alt="First slide"
-                                                    />
-                                                </div>
-                                            </Col>
-                                            <Col md={11}>
-                                                <div>
-                                                    <p className="p-0">
-                                                        Puneet Singh <br />
-                                                        <span>2016-02-17 18:07:11</span>
-                                                    </p>
-                                                    <p>
-                                                        Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                        Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
-                                                        Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
+                    <Row>
+                      <Col xs={2} md={1}>
+                        <div className="py-1">
+                          <img
+                            className="d-block"
+                            src={require('../../assets/images/Ellipse 11.png').default}
+                            width="50"
+                            height="50"
+                            alt="First slide"
+                          />
+                        </div>
+                      </Col>
+                      <Col xs={8} md={11}>
+                        <div>
+                          <p className="py-1">
+                            Puneet Singh <br />
+                            <span>2016-02-17 18:07:11</span>
+                          </p>
+                        </div>
+                      </Col>
+                          <p className="px-4">
+                            Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                            Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
+                            Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
 
-                                                    </p>
-                                                </div>
-                                            </Col>
-                                        </Row>
+                          </p>
+                    </Row>
+                    <hr />
+                    <Row>
+                      <Col xs={2} md={1}>
+                        <div className="py-1">
+                          <img
+                            className="d-block"
+                            src={require('../../assets/images/Ellipse 12.png').default}
+                            width="50"
+                            height="50"
+                            alt="First slide"
+                          />
+                        </div>
+                      </Col>
+                      <Col xs={8} md={11}>
+                        <div>
+                          <p className="p-0">
+                            Puneet Singh <br />
+                            <span>2016-02-17 18:07:11</span>
+                          </p>
+                        </div>
+                      </Col>
+                          <p className="px-4">
+                            Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                            Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
+                            Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
 
-                                        <hr />
-                                        <Row>
-                                            <Col md={1}>
-                                                <div className="py-1">
-                                                    <img
-                                                        className="d-block"
-                                                        src={require('../../assets/images/Ellipse 12.png').default}
-                                                        width="50"
-                                                        height="50"
-                                                        alt="First slide"
-                                                    />
-                                                </div>
-                                            </Col>
-                                            <Col md={11}>
-                                                <div>
-                                                    <p className="p-0">
-                                                        Puneet Singh <br />
-                                                        <span>2016-02-17 18:07:11</span>
-                                                    </p>
-                                                    <p className="p-0">
-                                                        Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                        Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
-                                                        Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
+                          </p>
+                    </Row>
+                    <hr />
+                    <Row>
+                      <Col xs={2} md={1}>
+                        <div className="py-1">
+                          <img
+                            className="d-block"
+                            src={require('../../assets/images/Ellipse 13.png').default}
+                            width="50"
+                            height="50"
+                            alt="First slide"
+                          />
+                        </div>
+                      </Col>
+                      <Col xs={8} md={11}>
+                        <div>
+                          <p className="p-0">
+                            Puneet Singh <br />
+                            <span>2016-02-17 18:07:11</span>
+                          </p>
+                        </div>
+                      </Col>
+                          <p className="px-4">
+                            Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                            Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
+                            Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
 
-                                                    </p>
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                        <hr />
-                                        <Row>
-                                            <Col md={1}>
-                                                <div className="py-1">
-                                                    <img
-                                                        className="d-block"
-                                                        src={require('../../assets/images/Ellipse 13.png').default}
-                                                        width="50"
-                                                        height="50"
-                                                        alt="First slide"
-                                                    />
-                                                </div>
-                                            </Col>
-                                            <Col md={11}>
-                                                <div>
-                                                    <p className="p-0">
-                                                        Puneet Singh <br />
-                                                        <span>2016-02-17 18:07:11</span>
-                                                    </p>
-                                                    <p>
-                                                        Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                                                        Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
-                                                        Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
-
-                                                    </p>
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                    </div>
+                          </p>
+                    </Row>
+                  </div>
                                     <hr />
                                 </Col>
                             </Row>
 
                         </Col>
-
                         <Col md={4} className="py-3" >
                             <Row>
                                 <Col md={12} >
+                                <h4>Trending Now</h4>
                                     <div>
                                         <h5>NEWS</h5>
                                         <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Lorem Ipsum Dolor Do Eiusmo</p>
@@ -355,7 +354,7 @@ const Admission = () => {
                 <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
-                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Title className="d-flex justify-content-center cardText"  >Indian Institute Of Technology</Card.Title>
                     <Card.Text className="d-flex justify-content-start p-1 m-1">
                       <Row>
                         <Col md={12} className="p-0" >
@@ -403,7 +402,7 @@ const Admission = () => {
                 <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
-                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
                     <Card.Text className="d-flex justify-content-start p-1 m-1">
                       <Row>
                         <Col md={12} className="p-0" >
@@ -451,7 +450,7 @@ const Admission = () => {
                 <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
-                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
                     <Card.Text className="d-flex justify-content-start p-1 m-1">
                       <Row>
                         <Col md={12} className="p-0" >
@@ -499,7 +498,7 @@ const Admission = () => {
               <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
-                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
                     <Card.Text className="d-flex justify-content-start p-1 m-1">
                       <Row>
                         <Col md={12} className="p-0" >
@@ -547,7 +546,7 @@ const Admission = () => {
               <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
-                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
                     <Card.Text className="d-flex justify-content-start p-1 m-1">
                       <Row>
                         <Col md={12} className="p-0" >
@@ -595,7 +594,7 @@ const Admission = () => {
                 <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
-                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
                     <Card.Text className="d-flex justify-content-start p-1 m-1">
                       <Row>
                         <Col md={12} className="p-0" >
@@ -643,7 +642,7 @@ const Admission = () => {
                 <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
-                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
                     <Card.Text className="d-flex justify-content-start p-1 m-1">
                       <Row>
                         <Col md={12} className="p-0" >
@@ -691,7 +690,7 @@ const Admission = () => {
                 <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
-                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
                     <Card.Text className="d-flex justify-content-start p-1 m-1">
                       <Row>
                         <Col md={12} className="p-0" >
@@ -739,7 +738,7 @@ const Admission = () => {
                 <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
-                    <Card.Title className="d-flex justify-content-center"  >Indian Institute Of Technology</Card.Title>
+                    <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
                     <Card.Text className="d-flex justify-content-start p-1 m-1">
                       <Row>
                         <Col md={12} className="p-0" >
@@ -789,7 +788,7 @@ const Admission = () => {
                     </Row>
                 </Container>
             </section>
-                    <FloatButton styles={{right:'0 !important'}}></FloatButton>
+                    <FloatButton className="d-display" styles={{right:'0 !important'}}></FloatButton>
                 <Footer/>
         </div>
 

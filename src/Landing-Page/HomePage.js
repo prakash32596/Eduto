@@ -1,6 +1,5 @@
-// import logo from './logo.svg';
+
 import './HomePage.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Container, Card, Col, Row, Navbar, Nav, ListGroup, Tab, Image, NavDropdown, InputGroup, InputForm, Form, FormControl, Button } from 'react-bootstrap';
 import Header from '../Components/header/Header';

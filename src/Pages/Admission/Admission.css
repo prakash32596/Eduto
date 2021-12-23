@@ -6,6 +6,14 @@
 .mobileText{
     display: none;
 }
+
+.d-display{
+display: none;
+}
+
+.cardText{
+    font-size: 19px !important;
+}
    
 .navTabLink{
     color: black !important;
@@ -67,6 +75,9 @@
       height: 150px;
   }
   .mobileText{
+    display: revert;
+}
+.d-display{
     display: revert;
 }
   }

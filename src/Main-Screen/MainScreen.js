@@ -1,12 +1,5 @@
 
-import React from 'react'
-// import {
-//     BrowserRouter as Router,
-//     Switch,
-//     Routes,
-//     Route,
-//     Link
-// } from "react-router-dom";
+import React from 'react';
 import PrimaryHeader from '../Components/header/PrimaryHeader';
 import SecondaryHeader from '../Components/header/SecondaryHeader';
 import About from '../Pages/About/About';
