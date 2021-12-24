@@ -332,8 +332,8 @@ function HomePage() {  const settings = {
       </section>
       <section className="py-5" style={{ minHeight: '400px', width: '100%' }}>
         <Container>
-          <Row md={12}>
-            <Col className="bannerImage  p-0" sm md={{ span: 8, offset:2 }}>
+          <Row>
+            <Col className="bannerImage  p-0" md={{ span: 8, offset:2 }}>
                   <Row>
                     <Col sm={4} md={8} className="bannerCircle" >
                       <Card.Text  className="py-2" >
@@ -361,7 +361,7 @@ function HomePage() {  const settings = {
             <Container>
             <Row>
               <Col className="py-4" md={4} sm>
-                <div style={{  width: '100%', paddingTop: '60px' }}>
+                <div style={{ paddingTop: '60px' }}>
                   {/* <Card.Img variant="top" src={require('../assets/images/harvard-university-cambridge-usa@2x.png').default} /> */}
                   <Card.Body>
                     <Card.Title className="">
@@ -547,7 +547,7 @@ function HomePage() {  const settings = {
                   </Card>
                 </Col >
               </Row>
-              <Row >
+              <Row>
                 <Col sm={6} md={12} style={{ marginTop: '30px', paddingBottom: '20px' }}>
                   <Card style={{ width: '100%', height: 'auto' }}>
                     <Card.Body className="p-0 d-flex justify-content-start">

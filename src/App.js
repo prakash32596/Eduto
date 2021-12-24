@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import MainScreen from './Main-Screen/MainScreen';
 import Admission from './Pages/Admission/Admission';
+import AdmissionSecond from './Pages/About/AboutSecond';
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
           <Route path="/"  element={<HomePage/>}  ></Route>
           <Route path="/about"  element={<MainScreen/>}  ></Route>
           <Route path="/admission"  element={<Admission/>}  ></Route>
+          <Route path="/Academics"  element={<AdmissionSecond/>}  ></Route>
         </Routes>
         </Router>
      

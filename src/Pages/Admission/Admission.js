@@ -47,7 +47,7 @@ const Admission = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1.05,
+                  slidesToShow: 1.03,
                     slidesToScroll: 1
                 }
             }
@@ -354,7 +354,7 @@ const Admission = () => {
                 <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
-                    <Card.Title className="d-flex justify-content-center cardText"  >Indian Institute Of Technology</Card.Title>
+                  <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
                     <Card.Text className="d-flex justify-content-start p-1 m-1">
                       <Row>
                         <Col md={12} className="p-0" >

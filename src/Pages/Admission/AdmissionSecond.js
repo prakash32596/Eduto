@@ -1,198 +1,211 @@
 import React, { useState } from 'react';
-import './About.css';
+import './Admission.css';
 import { Carousel } from 'react-bootstrap';
-import { Card, Row, Col, Container, Navbar, Nav, Button, Form, FormControl, FloatingLabel } from 'react-bootstrap';
+import { Card, Row, Col, Container, Navbar, Table, Nav, Button, Form, FormControl, FloatingLabel } from 'react-bootstrap';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Routes,
+    Route,
+    Link
+} from "react-router-dom";
 import Slider from 'react-slick';
+import Header from '../../Components/header/Header';
+import PrimaryHeader from '../../Components/header/PrimaryHeader';
+import FloatButton from '../../Utilities/FloatingButton/FloatButton'
+import Footer from '../../Components/footer/Footer';
 
-const About = () => {
-  const settings = {
-    dots: false,
-    arrows: true,
-    accessibility: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay:true,
-    autoplaySpeed:3000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1.03,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
-  return (
-    <div className="About">
-      <section className="sliderSelection">
-        <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100 imgCarousel"
-              src={require('../../assets/images/gallery.PNG').default}
-              height="400"
-              alt="First slide"
-            />
-            {/* <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption> */}
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100 imgCarousel"
-              src={require('../../assets/images/gallery2.PNG').default}
-              height="400"
-              alt="Second slide"
-            />
-          </Carousel.Item>
-        </Carousel>
-      </section>
-      <section className="py-2">
-        <Container>
-          <Row>
-            <Col md={8}>
-              <div>
-                <Row>
-                  <Col className="p-2" md={12}>
-                    <h4 className="py-2">Overview</h4>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col className="p-2" md={12}>
-                    <span className=""><i class="fa fa-graduation-cap" aria-hidden="true"></i></span> <span className="p-2">63%</span> <span className="p-2" >Graduation Rate</span>
-                  </Col>
-                </Row>
-              </div>
-              <div>
-                <Row>
-                  <Col md={6} className="p-2" >
-                    <span className=""><i  class="fa fa-info-circle" aria-hidden="true"></i></span> <span className="px-2">4-Year</span>
-                    <span className="p-2"><i style={{ fontSize: '10px' }} class="fa fa-circle px-2"  aria-hidden="true"></i>Private</span>
-                    <span className="p-2"><i class="fa fa-circle px-2" style={{ fontSize: '10px' }} aria-hidden="true"></i>Medium</span>
-                    <span className="py-2"><i class="fa fa-circle px-2" style={{ fontSize: '10px' }} aria-hidden="true"></i>Urban</span>
-                  </Col>
-                  <Col md={6} className="p-2">
-                    <span className="p-2"><i class="fa fa-inr px-2" aria-hidden="true"></i>$28K</span><span className="p-2">Average Per Year After Aid</span>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col md={12} className="p-2" >
-                    <span><i class="fa fa-star" aria-hidden="true"></i>
-                    </span> <span className="p-2">4.7</span>|<span className="p-2"><i class="fa fa-map-marker px-3" aria-hidden="true"></i>
-                      Kanpur</span>|<span className="p-2"><i class="fa fa-phone px-2" aria-hidden="true"></i>(800) 342-5598</span>|<span className="p-2"><i class="fa fa-laptop px-2" aria-hidden="true"></i>http://loremipsumdolorsit.edu</span>
-                  </Col>
-                </Row>
-                <hr />
-                <Row>
-                  <Col md={12} className="" >
-                    <div>
-                      <h5>More About The College</h5>
-                      <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempo Incididunt Ut Labore Et Dolore Magna Aliqua.
-                        Ut Enim Ad Minim Veniam, Quis No Strud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
-                        Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore. Duis Aute Irure Dolor In.</p>
-                    </div>
-                  </Col>
-                </Row>
+const AdmissionSecond = () => {
+    const settings = {
+        dots: false,
+        arrows: true,
+        accessibility: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay:true,
+        autoplaySpeed:3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1.05,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
+    return (
+        <div className="About">
+            <PrimaryHeader/>
+            <Header />
+            <section className="sliderSelection">
+                <Card className="bg-dark text-white cardBanner">
+                    <Card.Img className="cardBannerImg" src={require('../../assets/images/Group 30886.png').default} alt="Card image" />
+                    <Card.ImgOverlay>
+                    </Card.ImgOverlay>
+                    {/* <Card.Text className="mobileText">
+                        <h6 style={{ fontSize: '30px', fontFamily: 'Inter', fontWeight: '600',marginTop:'70px' }}>Online MBA</h6>
+                    </Card.Text> 
+                        <Card.Text className="px-5" style={{ marginTop: '190px' }}>
+                            <Row>
+                                <Col md={{ span: 6 }}>
+                                    <div className="px-5 m-display">
+                                        <span className="px-5" style={{ fontSize: '25px', fontFamily: 'Inter', fontWeight: '600' }}>Online MBA</span>
+                                    </div>
+                                </Col>
+                                <Col className="d-flex m-display" md={{ span: 3, offset: 3 }} >
+                                    <div className="justify-contetn-center m-display">
+                                        <span className=" justify-content-center p-2"><Button variant="light"><img width={20} src={require('../../assets/images/connection.png').default}/> Connect With Our Experts</Button></span>
+                                    </div>
+                                </Col>
+                            </Row>
 
-              </div>
-              <hr />
-              <Row>
-                <Col md={6} className="p-2" >
-                  <div>
-                    <h5>College Board Code</h5>
-                    <p>3465</p>
-                  </div>
-                </Col>
-                <Col md={6} className="p-2">
-                  <div>
-                    <h5>Fee Waiver Info</h5>
-                    <p>Apply For Free: No Waiver Required.</p>
-                  </div>
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12} className="p-2" >
-                  <div>
-                    <h5>Application Types Accepted</h5>
-                    <p>Common Application, Online Through College’s Own Website</p>
-                  </div>
-                  <hr />
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12} className="p-2" >
-                  <div>
-                    <h5>Next Steps</h5>
-                    <div className="py-4">
-                      <Nav className="navTab" variant="pills" defaultActiveKey="#">
-                        <Nav.Item className="navTabItem">
-                          <Nav.Link className="navTabLink" href="#">Visit College Website <i class="fa fa-angle-right" style={{ paddingLeft: '36px' }} aria-hidden="true"></i></Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item className="navTabItem">
-                          <Nav.Link className="navTabLink" eventKey="link-1">View Online Application <i class="fa fa-angle-right" style={{ paddingLeft: '20px' }} aria-hidden="true"></i></Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item className="navTabItem">
-                          <Nav.Link className="navTabLink" eventKey="link-2">Estimate Your Net Cost <i class="fa fa-angle-right" style={{ paddingLeft: '20px' }} aria-hidden="true"></i></Nav.Link>
-                        </Nav.Item>
-                      </Nav>
-                      <h5 className="py-4">Contact Information</h5>
-                      <img
-                        className="d-block w-100"
-                        src={require('../../assets/images/Rectangle 5906.png').default}
-                        width="100"
-                        height="auto"
-                        alt="First slide"
-                      />
-                      <div className="py-4">
-                        <p className="py-2">
-                          <span className=""><i class="fa fa-map-marker px-3" aria-hidden="true"></i>
-                            Lorem Ipsum Dolor Sit Amet</span>
-                        </p>
-                        <p className="py-2">
-                          <span className="p-2"><i class="fa fa-phone px-2" aria-hidden="true"></i>(800) 342-5598</span>
-                        </p>
-                        <p className="py-2">
-                          <span className="p-2"><i class="fa fa-laptop px-2" aria-hidden="true"></i>http://loremipsumdolorsit.edu</span>
-                        </p>
+                        </Card.Text> */}
+                </Card>
+            </section>
+            <section className="py-2 px-1">
+                <Container>
+                    <Row>
+                        <Col>
+                            <Nav className="me-auto navBar mobile-menu-display">
+                                <Nav.Link as={Link} className="navTabLink active" to="/">Overview</Nav.Link>
+                                <Nav.Link as={Link} className="navTabLink" eventKey="link-1" to="#" >Eligibility & Entrance Exams</Nav.Link>
+                                <Nav.Link as={Link} className="navTabLink" eventKey="link-2" to="#">Course And Specialisation</Nav.Link>
+                                <Nav.Link as={Link} className="navTabLink" eventKey="link-3" to="#">Others</Nav.Link>
+                            </Nav>
+                        </Col>
+                    </Row>
 
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <h5>Reviews And Ratings <span> (48)</span></h5>
-                    <FloatingLabel className="py-2" controlId="floatingTextarea2" label="">
-                      <Form.Control
-                        as="textarea"
-                        placeholder="Write Your Review Here…"
-                        style={{ height: '100px' }}
-                      />
-                    </FloatingLabel>
-                    <Button style={{ width: '200px' }} variant="primary" size="md">
-                      Post
-                    </Button>
-                  </div>
-                  <div className="py-4" style={{}}>
+                </Container>
+
+            </section>
+            <section className="py-2">
+                <Container>
+                    <Row>
+                        <Col md={8}>
+                            <div>
+
+                                <Row>
+                                    <Col className="p-2" md={12}>
+                                        <h4 className="py-2">Overview</h4>
+                                    </Col>
+                                    <Col md={12} className="" >
+                                        <div>
+                                            <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempo Incididunt Ut Labore Et Dolore Magna Aliqua.
+                                                Ut Enim Ad Minim Veniam, Quis No Strud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
+                                                Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore. Duis Aute Irure Dolor In.</p>
+                                        </div>
+                                    </Col>
+                                    <Col md={12} className="" >
+                                        <div>
+                                            <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempo Incididunt Ut Labore Et Dolore Magna Aliqua.
+                                                Ut Enim Ad Minim Veniam, Quis No Strud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
+                                                Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore. Duis Aute Irure Dolor In.</p>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </div>
+                            <div>
+                                <hr />
+
+                                <Row>
+                                    <Col md={12} className="" >
+                                        <div>
+                                            <Table className="p-2 m-0" bsPrefix responsive="sm" size="lg" >
+                                                <thead className="tableHead">
+                                                    <tr bordered="false" >
+                                                        <th className="px-4">Features</th>
+                                                        <th className="px-4">Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr className="tableBorder" >
+                                                        <td className="tableData px-4" >Course Name</td>
+                                                        <td className="tableData px-4">Online MBA</td>
+                                                    </tr>
+                                                    <tr className="tableBorder">
+                                                        <td className="tableData px-4">Course Level</td>
+                                                        <td className="tableData px-4">Post Graduation</td>
+                                                    </tr>
+                                                    <tr className="tableBorder">
+                                                        <td className="tableData px-4">Course Pedagogy</td>
+                                                        <td className="tableData px-4">Online via video conferencing and Learning Management System (LMS)</td>
+
+                                                    </tr>
+                                                    <tr className="tableBorder">
+                                                        <td className="tableData px-4">Online MBA Course Fee</td>
+                                                        <td className="tableData px-4">INR 50,000 to INR 5 lakh and above</td>
+
+                                                    </tr>
+                                                    <tr className="tableBorder">
+                                                        <td className="tableData px-4">Online MBA Eligibility Criteria</td>
+                                                        <td className="tableData px-4">
+                                                            <span>Graduation</span><br />
+                                                            <span>Work experience (for some programmes)</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr className="tableBorder">
+                                                        <td className="tableData px-4">Online MBA Admission Process</td>
+                                                        <td className="tableData px-4">Merit/entrance exam based</td>
+                                                    </tr>
+                                                    <tr className="tableBorder">
+                                                        <td className="tableData px-4">Online MBA Duration</td>
+                                                        <td className="tableData px-4">One year to two years</td>
+                                                    </tr>
+                                                    <tr className="tableBorder">
+                                                        <td className="tableData px-4">Number of Colleges</td>
+                                                        <td className="tableData px-4">There are 170+ colleges in India offering Online MBA</td>
+                                                    </tr>
+                                                    <tr className="tableBorder">
+                                                        <td className="tableData px-4">Top Online MBA Specialisations</td>
+                                                        <td className="tableData px-4">Sales, Marketing, Operations, Finance, Human Resources, Digital Marketing, Business Analytics</td>
+                                                    </tr>
+                                                    <tr className="tableBorder">
+                                                        <td className="tableData px-4">Online MBA Average Salary</td>
+                                                        <td className="tableData px-4">INR 5 lakh to 6 lakh</td>
+                                                    </tr>
+                                                </tbody>
+                                            </Table>
+                                        </div>
+                                    </Col>
+                                </Row>
+
+                            </div>
+                            <Row>
+                                <Col md={12} className="p-2" >
+                                    <div>
+                                        <h5>Reviews And Ratings <span> (48)</span></h5>
+                                        <FloatingLabel className="py-2" controlId="floatingTextarea2" label="">
+                                            <Form.Control
+                                                as="textarea"
+                                                placeholder="Write Your Review Here…"
+                                                style={{ height: '100px' }}
+                                            />
+                                        </FloatingLabel>
+                                        <Button style={{ width: '200px' }} variant="primary" size="md">
+                                            Post
+                                        </Button>
+                                    </div>
+                                    <div className="py-4" style={{}}>
                     <Row>
                       <Col xs={2} md={1}>
                         <div className="py-1">
@@ -277,61 +290,64 @@ const About = () => {
                           </p>
                     </Row>
                   </div>
-                  <hr />
-                </Col>
-              </Row>
-            </Col>
-            <Col md={4} className="py-3" >
-              <Row>
-                <Col md={12} >
-                  <div>
-                    <h4>Trending Now</h4>
-                    <h6>NEWS</h6>
-                    <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Lorem Ipsum Dolor Do Eiusmo</p>
-                  </div>
-                  <hr />
-                  <div>
-                    <h6>ARTICLE</h6>
-                    <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Lorem Ipsum Dolor Do Eiusmo</p>
-                  </div>
-                  <hr />
-                  <div>
-                    <h6>NEWS</h6>
-                    <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Lorem Ipsum Dolor Do Eiusmo</p>
-                  </div>
-                  <hr />
-                  <div>
-                    <h6>ARTICLE</h6>
-                    <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Lorem Ipsum Dolor Do Eiusmo</p>
-                  </div>
-                  <hr />
-                  <div>
-                    <h6>NEWS</h6>
-                    <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Lorem Ipsum Dolor Do Eiusmo</p>
-                  </div>
-                  <hr />
-                  <div className="py-4">
-                    <h4>Advertisement</h4>
-                    <img
-                      className="d-block w-100"
-                      src={require('../../assets/images/image (3)@2x.png').default}
-                      height="auto"
-                      alt="Second slide"
-                    />
-                  </div>
-                  <div className="py-2">
-                    <img
-                      className="d-block w-100"
-                      src={require('../../assets/images/image (4)@2x.png').default}
-                      height="auto"
-                      alt="Second slide"
-                    />
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-          <div>
+                                    <hr />
+                                </Col>
+                            </Row>
+
+                        </Col>
+                        <Col md={4} className="py-3" >
+                            <Row>
+                                <Col md={12} >
+                                <h4>Trending Now</h4>
+                                    <div>
+                                        <h5>NEWS</h5>
+                                        <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Lorem Ipsum Dolor Do Eiusmo</p>
+                                    </div>
+                                    <hr />
+                                    <div>
+                                        <h5>ARTICLE</h5>
+                                        <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Lorem Ipsum Dolor Do Eiusmo</p>
+                                    </div>
+                                    <hr />
+                                    <div>
+                                        <h5>NEWS</h5>
+                                        <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Lorem Ipsum Dolor Do Eiusmo</p>
+                                    </div>
+                                    <hr />
+                                    <div>
+                                        <h5>ARTICLE</h5>
+                                        <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Lorem Ipsum Dolor Do Eiusmo</p>
+                                    </div>
+                                    <hr />
+                                    <div>
+                                        <h5>NEWS</h5>
+                                        <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Lorem Ipsum Dolor Do Eiusmo</p>
+                                    </div>
+                                    <hr />
+                                    <div className="py-4">
+                                        <h5>Advertisement</h5>
+                                        <img
+                                            className="d-block w-100"
+                                            src={require('../../assets/images/image (3)@2x.png').default}
+                                            height="auto"
+                                            alt="Second slide"
+                                        />
+                                    </div>
+                                    <div className="py-2">
+                                        <img
+                                            className="d-block w-100"
+                                            src={require('../../assets/images/image (4)@2x.png').default}
+                                            height="auto"
+                                            alt="Second slide"
+                                        />
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                        <div>
             <h5> Find More Colleges Like This</h5>
             <Slider {...settings}>
               <div className="p-1">
@@ -768,11 +784,15 @@ const About = () => {
               </div>
             </Slider>
           </div>
-        </Container>
-      </section>
-    </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+                    <FloatButton className="d-display" styles={{right:'0 !important'}}></FloatButton>
+                <Footer/>
+        </div>
 
-  );
+    );
 }
 
-export default About;
+export default Admission;

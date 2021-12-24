@@ -20,7 +20,7 @@ const SecondaryHeader = () => {
             <Nav className="m-auto navBar m-display">
               <Nav.Link as={Link} className="navItem" to="/">About</Nav.Link>
               <Nav.Link as={Link} className="navItem" to="/admission">Admission</Nav.Link>
-              <Nav.Link as={Link} className="navItem" to="#College/Universities">Academics</Nav.Link>
+              <Nav.Link as={Link} className="navItem" to="/Academics">Academics</Nav.Link>
               <Nav.Link as={Link} className="navItem" to="#Get Involved">Costs</Nav.Link>
               <Nav.Link as={Link} className="navItem" to="#Get Involved">Campus Life</Nav.Link>
               <NavDropdown

@@ -3,8 +3,11 @@ import './About.css';
 import { Carousel } from 'react-bootstrap';
 import { Card, Row, Col, Container, Navbar, Nav, Button, Form, FormControl, FloatingLabel } from 'react-bootstrap';
 import Slider from 'react-slick';
+import SecondaryHeader from '../../Components/header/SecondaryHeader';
+import PrimaryHeader from '../../Components/header/PrimaryHeader';
+import Footer from '../../Components/footer/Footer';
 
-const About = () => {
+const AboutSecond = () => {
   const settings = {
     dots: false,
     arrows: true,
@@ -44,7 +47,8 @@ const About = () => {
   };
   return (
     <div className="About">
-      <section className="sliderSelection">
+<PrimaryHeader className="m-display" />
+            <SecondaryHeader />      {/* <section className="sliderSelection">
         <Carousel>
           <Carousel.Item>
             <img
@@ -53,10 +57,6 @@ const About = () => {
               height="400"
               alt="First slide"
             />
-            {/* <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption> */}
           </Carousel.Item>
           <Carousel.Item>
             <img
@@ -67,8 +67,42 @@ const About = () => {
             />
           </Carousel.Item>
         </Carousel>
+      </section> */}
+      <section>
+      <Card className="bg-dark text-white" style={{ zIndex:'-99'}}>
+  <Card.Img className="imgCarousel" src={require('../../assets/images/gallery1.png').default}
+              height="400" alt="Card image" />
+  <Card.ImgOverlay>
+  </Card.ImgOverlay>
+</Card>
+    <Card.Text className=" m-display" style={{color:'white',fontFamily:'Inter',fontWeight:'400', zIndex:'99', marginTop:'-120px'}}>
+        <Container>
+            <Row>
+                <Col  sm={8} md={8}>
+                 <Row>
+                     <Col className=" m-display p-0" xs={6} sm={2}  md={2} ><img  src={require('../../assets/images/Rectangle 3.png').default} /></Col>
+                      <Col xs={10} sm={10} md={10}>
+                        <h4 style={{color:'white',fontFamily:'Inter',fontWeight:'800',}}>NATIONAL INSTITUTE OF TECHNOLOGY</h4>
+                        <span><i class="fa fa-star" style={{color:'yellow'}} aria-hidden="true"></i>
+                    </span> <span className="p-2">4.7</span>|<span className="p-2"><i class="fa fa-map-marker px-3" aria-hidden="true"></i>
+                      Kanpur</span>|<span className="p-2"><i class="fa fa-phone px-2" aria-hidden="true"></i>(800) 342-5598</span>|<span className="p-2"><i class="fa fa-laptop px-2" aria-hidden="true"></i>http://loremipsumdolorsit.edu</span>
+                      </Col>
+                 </Row>
+                </Col>
+                <Col  className="m-display  " >
+                <div className="py-4  m-display">
+
+                <span className=""><img src={require('../../assets/images/noun_Share_896160.svg').default} width={20} height={15} /></span> <span className="px-2">Share</span>
+                    <span className="p-2"><img src={require('../../assets/images/noun_Compare_3133212.svg').default} width={20} height={15} />Brouchure</span>
+                    <span className="p-2"><img src={require('../../assets/images/noun_Share_896160.svg').default} width={20} height={15} />Compare</span>
+                </div>
+                </Col>
+            </Row>
+        </Container>
+    </Card.Text>
+    {/* <Card.Text>Last updated 3 mins ago</Card.Text> */}
       </section>
-      <section className="py-2">
+      <section className="py-5">
         <Container>
           <Row>
             <Col md={8}>
@@ -770,9 +804,10 @@ const About = () => {
           </div>
         </Container>
       </section>
+      <Footer/>
     </div>
 
   );
 }
 
-export default About;
+export default AboutSecond;
