@@ -66,7 +66,7 @@ display: none;
 @media screen 
   and (max-width: 480px) {
   .m-display{
-      display: none;
+      display: none !important;
   }
   .cardBanner{
       height: 150px;

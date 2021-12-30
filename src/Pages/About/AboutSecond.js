@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import './About.css';
-import { Carousel } from 'react-bootstrap';
-import { Card, Row, Col, Container, Navbar, Nav, Button, Form, FormControl, FloatingLabel } from 'react-bootstrap';
+import { Card, Row, Col, Container, Nav, Button, Form, FloatingLabel } from 'react-bootstrap';
 import Slider from 'react-slick';
 import SecondaryHeader from '../../Components/header/SecondaryHeader';
 import PrimaryHeader from '../../Components/header/PrimaryHeader';
 import Footer from '../../Components/footer/Footer';
+import {
+  BrowserRouter as Router,
+  Outlet,
+  
+} from 'react-router-dom';
+import { useNavigate } from 'react-router';
+import Overview from '../../Mobile-Screens/Overview-M/Overview';
+
+// import { useNavigate } from "@reach/router"
+
 
 const AboutSecond = () => {
   const settings = {
@@ -16,8 +25,8 @@ const AboutSecond = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay:true,
-    autoplaySpeed:3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -45,62 +54,43 @@ const AboutSecond = () => {
       }
     ]
   };
+
   return (
     <div className="About">
-<PrimaryHeader className="m-display" />
-            <SecondaryHeader />      {/* <section className="sliderSelection">
-        <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100 imgCarousel"
-              src={require('../../assets/images/gallery.PNG').default}
-              height="400"
-              alt="First slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100 imgCarousel"
-              src={require('../../assets/images/gallery2.PNG').default}
-              height="400"
-              alt="Second slide"
-            />
-          </Carousel.Item>
-        </Carousel>
-      </section> */}
+      <PrimaryHeader className="m-display" />
+      <SecondaryHeader />  
       <section>
-      <Card className="bg-dark text-white" style={{ zIndex:'-99'}}>
-  <Card.Img className="imgCarousel" src={require('../../assets/images/gallery1.png').default}
-              height="400" alt="Card image" />
-  <Card.ImgOverlay>
-  </Card.ImgOverlay>
-</Card>
-    <Card.Text className=" m-display" style={{color:'white',fontFamily:'Inter',fontWeight:'400', zIndex:'99', marginTop:'-120px'}}>
-        <Container>
+        <Card className="bg-dark text-white" style={{ zIndex: '-99' }}>
+          <Card.Img className="imgCarousel" src={require('../../assets/images/gallery1.png').default}
+            height="400" alt="Card image" />
+          <Card.ImgOverlay>
+          </Card.ImgOverlay>
+        </Card>
+        <Card.Text className=" m-display" style={{ color: 'white', fontFamily: 'Inter', fontWeight: '400', zIndex: '99', marginTop: '-120px' }}>
+          <Container>
             <Row>
-                <Col  sm={8} md={8}>
-                 <Row>
-                     <Col className=" m-display p-0" xs={6} sm={2}  md={2} ><img  src={require('../../assets/images/Rectangle 3.png').default} /></Col>
-                      <Col xs={10} sm={10} md={10}>
-                        <h4 style={{color:'white',fontFamily:'Inter',fontWeight:'800',}}>NATIONAL INSTITUTE OF TECHNOLOGY</h4>
-                        <span><i class="fa fa-star" style={{color:'yellow'}} aria-hidden="true"></i>
+              <Col sm={8} md={8}>
+                <Row>
+                  <Col className=" m-display p-0" xs={6} sm={2} md={2} ><img src={require('../../assets/images/Rectangle 3.png').default} /></Col>
+                  <Col xs={10} sm={10} md={10}>
+                    <h4 style={{ color: 'white', fontFamily: 'Inter', fontWeight: '800', }}>NATIONAL INSTITUTE OF TECHNOLOGY</h4>
+                    <span><i class="fa fa-star" style={{ color: 'yellow' }} aria-hidden="true"></i>
                     </span> <span className="p-2">4.7</span>|<span className="p-2"><i class="fa fa-map-marker px-3" aria-hidden="true"></i>
                       Kanpur</span>|<span className="p-2"><i class="fa fa-phone px-2" aria-hidden="true"></i>(800) 342-5598</span>|<span className="p-2"><i class="fa fa-laptop px-2" aria-hidden="true"></i>http://loremipsumdolorsit.edu</span>
-                      </Col>
-                 </Row>
-                </Col>
-                <Col  className="m-display  " >
+                  </Col>
+                </Row>
+              </Col>
+              <Col className="m-display  " >
                 <div className="py-4  m-display">
-
-                <span className=""><img src={require('../../assets/images/noun_Share_896160.svg').default} width={20} height={15} /></span> <span className="px-2">Share</span>
-                    <span className="p-2"><img src={require('../../assets/images/noun_Compare_3133212.svg').default} width={20} height={15} />Brouchure</span>
-                    <span className="p-2"><img src={require('../../assets/images/noun_Share_896160.svg').default} width={20} height={15} />Compare</span>
+                  <span className=""><img src={require('../../assets/images/noun_Share_896160.svg').default} width={20} height={15} /></span> <span className="px-2">Share</span>
+                  <span className="p-2"><img src={require('../../assets/images/noun_Compare_3133212.svg').default} width={20} height={15} />Brouchure</span>
+                  <span className="p-2"><img src={require('../../assets/images/noun_Share_896160.svg').default} width={20} height={15} />Compare</span>
                 </div>
-                </Col>
+              </Col>
             </Row>
-        </Container>
-    </Card.Text>
-    {/* <Card.Text>Last updated 3 mins ago</Card.Text> */}
+          </Container>
+        </Card.Text>
+        {/* <Card.Text>Last updated 3 mins ago</Card.Text> */}
       </section>
       <section className="py-5">
         <Container>
@@ -121,8 +111,8 @@ const AboutSecond = () => {
               <div>
                 <Row>
                   <Col md={6} className="p-2" >
-                    <span className=""><i  class="fa fa-info-circle" aria-hidden="true"></i></span> <span className="px-2">4-Year</span>
-                    <span className="p-2"><i style={{ fontSize: '10px' }} class="fa fa-circle px-2"  aria-hidden="true"></i>Private</span>
+                    <span className=""><i class="fa fa-info-circle" aria-hidden="true"></i></span> <span className="px-2">4-Year</span>
+                    <span className="p-2"><i style={{ fontSize: '10px' }} class="fa fa-circle px-2" aria-hidden="true"></i>Private</span>
                     <span className="p-2"><i class="fa fa-circle px-2" style={{ fontSize: '10px' }} aria-hidden="true"></i>Medium</span>
                     <span className="py-2"><i class="fa fa-circle px-2" style={{ fontSize: '10px' }} aria-hidden="true"></i>Urban</span>
                   </Col>
@@ -247,12 +237,12 @@ const AboutSecond = () => {
                           </p>
                         </div>
                       </Col>
-                          <p className="px-4">
-                            Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                            Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
-                            Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
+                      <p className="px-4">
+                        Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
+                        Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
 
-                          </p>
+                      </p>
                     </Row>
                     <hr />
                     <Row>
@@ -275,12 +265,12 @@ const AboutSecond = () => {
                           </p>
                         </div>
                       </Col>
-                          <p className="px-4">
-                            Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                            Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
-                            Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
+                      <p className="px-4">
+                        Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
+                        Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
 
-                          </p>
+                      </p>
                     </Row>
                     <hr />
                     <Row>
@@ -303,12 +293,12 @@ const AboutSecond = () => {
                           </p>
                         </div>
                       </Col>
-                          <p className="px-4">
-                            Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
-                            Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
-                            Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
+                      <p className="px-4">
+                        Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                        Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Labnisi Ut Aliquip Ex Ea Commodo Consequat.
+                        Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
 
-                          </p>
+                      </p>
                     </Row>
                   </div>
                   <hr />
@@ -372,7 +362,55 @@ const AboutSecond = () => {
                 <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
-                  <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
+                    <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-map-marker" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">Delhi, India</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text className="d-flex justify-content-start p-1 m-1">
+                      <Row>
+                        <Col md={12} className="p-0" >
+                          <span className=""><i class="fa fa-info-circle" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-1">4-Year</span>
+                          <span className="p-1" style={{ fontSize: '13px' }}><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Private</span>
+                          <span style={{ fontSize: '13px' }} className="p-1"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="px-0">Medium</span>
+                          <span style={{ fontSize: '13px' }} className="p-0"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
+                          <span style={{ fontSize: '14px' }} className="p-0">Urban</span>
+                        </Col>
+                      </Row>
+
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+                          <span style={{ fontSize: '14px' }}>Courses Offered</span><br />
+                          <span style={{ fontSize: '14px' }}>B.E./B.Tech, M.E./M.Tech, B.Sc... 4 More</span>
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    <Card.Text>
+                      <Row>
+                        <Col>
+
+                        </Col>
+                      </Row>
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  </Card.Body>
+                </Card>
+              </div>
+              <div className="p-1">
+                <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
+                  <Card.Body>
+                    <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
                     <Card.Text className="d-flex justify-content-start p-1 m-1">
                       <Row>
                         <Col md={12} className="p-0" >
@@ -513,55 +551,7 @@ const AboutSecond = () => {
                 </Card>
               </div>
               <div className="p-1">
-              <Card style={{ width: '100%' }}>
-                  <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
-                  <Card.Body>
-                    <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
-                    <Card.Text className="d-flex justify-content-start p-1 m-1">
-                      <Row>
-                        <Col md={12} className="p-0" >
-                          <span className=""><i class="fa fa-map-marker" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
-                          <span style={{ fontSize: '14px' }} className="px-1">Delhi, India</span>
-                        </Col>
-                      </Row>
-
-                    </Card.Text>
-                    <Card.Text className="d-flex justify-content-start p-1 m-1">
-                      <Row>
-                        <Col md={12} className="p-0" >
-                          <span className=""><i class="fa fa-info-circle" style={{ fontSize: '14px' }} aria-hidden="true"></i></span>
-                          <span style={{ fontSize: '14px' }} className="px-1">4-Year</span>
-                          <span className="p-1" style={{ fontSize: '13px' }}><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
-                          <span style={{ fontSize: '14px' }} className="px-0">Private</span>
-                          <span style={{ fontSize: '13px' }} className="p-1"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
-                          <span style={{ fontSize: '14px' }} className="px-0">Medium</span>
-                          <span style={{ fontSize: '13px' }} className="p-0"><i class="fa fa-circle px-1" style={{ fontSize: '10px' }} aria-hidden="true"></i></span>
-                          <span style={{ fontSize: '14px' }} className="p-0">Urban</span>
-                        </Col>
-                      </Row>
-
-                    </Card.Text>
-                    <Card.Text>
-                      <Row>
-                        <Col>
-                          <span style={{ fontSize: '14px' }}>Courses Offered</span><br />
-                          <span style={{ fontSize: '14px' }}>B.E./B.Tech, M.E./M.Tech, B.Sc... 4 More</span>
-                        </Col>
-                      </Row>
-                    </Card.Text>
-                    <Card.Text>
-                      <Row>
-                        <Col>
-
-                        </Col>
-                      </Row>
-                    </Card.Text>
-                    {/* <Button variant="primary">Go somewhere</Button> */}
-                  </Card.Body>
-                </Card>
-              </div>
-              <div className="p-1">
-              <Card style={{ width: '100%' }}>
+                <Card style={{ width: '100%' }}>
                   <Card.Img variant="top" src={require('../../assets/images/download.png').default} />
                   <Card.Body>
                     <Card.Text className="d-flex justify-content-center" > <h5>Indian Institute Of Technology</h5></Card.Text>
@@ -804,7 +794,7 @@ const AboutSecond = () => {
           </div>
         </Container>
       </section>
-      <Footer/>
+      <Footer />
     </div>
 
   );
